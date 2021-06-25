@@ -49,13 +49,10 @@ ul li:hover{
 }
 
  button{
-    background-color: rgb(168, 21, 21);
+    /* background-color: rgb(168, 21, 21); */
     /* align-items: center; */
     border-color: rgb(255, 255, 255);
     color: rgb(255, 255, 255);
     padding: 5px;
     margin-left :20px; ;
-}
-navbar{
-    
 }
