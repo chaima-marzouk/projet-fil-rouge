@@ -13,7 +13,7 @@ body{
     left: 0;
     width: 250px;
     height: 100%;
-    background: #9e0000;
+    background: #770000;
 }
 .sidebar header{
   font-size: 22px;
@@ -41,7 +41,7 @@ body{
     
 }
 ul li:hover{
-    padding-left: 30px;
+    padding-left: 10px;
 }
 .sidebar ul {
     margin-top: 119px;

@@ -11,19 +11,19 @@
     <title>Blood bank</title>
 </head>
 <body>
-<div class="sidebar">
+<!-- <div class="sidebar">
     <header>LOGO</header>
     <!-- <input type="submit" value="Add new admin"> -->
     
-    <ul>
+    <!-- <ul>
     <button type="button" class="btn btn-light">Add new Admin</button>
         <li><a href="#">New post</a></li>
         <li><a href="#">Pages</a></li>
-        <li><a href="#">Profil</a></li>
+        <li><a href="#">Profil</a></li> -->
         <!-- <li><a href="#">test2</a></li> -->
         
-    </ul>
-</div>
+    <!-- </ul>
+</div>  -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style=" margin-left: 249px; margin-top: 20px;">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,30 +59,44 @@
     </div>
   </div>
 </nav>
+
 <table class="table table-sm" style="margin: 5% 20%;">
   <thead>
+  
     <tr>
+       
       <th scope="col">#</th>
       <th scope="col">Full name</th>
       <th scope="col">CND</th>
       <th scope="col">Adress</th>
       <th scope="col">Blood G.</th>
       <th scope="col">Phone nember</th>
+      <th scope="col">age</th>
       <th scope="col">Delete</th>
     </tr>
   </thead>
+  
   <tbody>
+  <?php foreach ($data as $row) :?>
     <tr>
-      <th>hi</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
+    
+      <td>hi</th>
+       
+      <td><?php echo $row->full_name ;?></td>
+      <td><?php echo $row->cnd ;?></td>
+      <td><?php echo $row->adress ;?></td>
+      <td><?php echo $row->blood_group ;?></td>
+      <td><?php echo $row->phone ;?></td>
+      <td><?php echo $row->age ;?></td>
+      <td></td>
+      
     </tr>
+    <?php endforeach ?>
+   
   </tbody>
+  
 </table>
+
 
     
 
