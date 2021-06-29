@@ -6,12 +6,14 @@
         }
         public function index()
         {
-            $this->view('pages/Admin');
+            $donors = $this->callModel->getDonor();
+            $data = [
+                "donors" => $donors,
+
+            ];
+            $this->view('pages/Admin',$data);
         } 
-        public function Admin(){
-            $this->callModel->getDonor();
-            $this->view('pages/Admin' ,$data);
-        }
+        
     }
 
 

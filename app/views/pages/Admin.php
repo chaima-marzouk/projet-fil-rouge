@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/style.css">
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     <title>Blood bank</title>
 </head>
 <body>
@@ -77,18 +77,18 @@
   </thead>
   
   <tbody>
-  <?php foreach ($data as $row) :?>
+  <?php foreach ($data["donors"] as $row) :?>
     <tr>
     
-      <td>hi</th>
+      <td><?php echo $row->id ;?></td>
        
       <td><?php echo $row->full_name ;?></td>
-      <td><?php echo $row->cnd ;?></td>
+      <td><?php echo $row->cdn ;?></td>
       <td><?php echo $row->adress ;?></td>
       <td><?php echo $row->blood_group ;?></td>
       <td><?php echo $row->phone ;?></td>
       <td><?php echo $row->age ;?></td>
-      <td></td>
+      <td><a href="<?php echo URLROOT;?>/UserController/delete?id=<?php echo $row->id;?>" button type="submit" name="delete" class="btn btn-danger">Delete</button></a></td>
       
     </tr>
     <?php endforeach ?>

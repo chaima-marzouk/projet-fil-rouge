@@ -3,6 +3,7 @@
 class UserModel {
 
     private $database;
+    // public function __construct()
     public function __construct()
     {
         //creer un objet d'une class en utulisant "new"
@@ -16,7 +17,7 @@ class UserModel {
         //execution de la query / fetch all 
 
         $result = $this->database->resultSet();
-        console.log($result);
+        // console.log($result);
         return $result;
       
     }
