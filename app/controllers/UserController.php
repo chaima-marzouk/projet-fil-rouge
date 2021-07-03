@@ -7,6 +7,7 @@
         public function index()
         {
             $donors = $this->callModel->getDonor();
+           
             $data = [
                 "donors" => $donors,
 
@@ -14,6 +15,23 @@
             $this->view('pages/Admin',$data);
         } 
         
+        public function delete()
+        {
+            $data = [
+                'id' => $_GET['id'],
+            ]; 
+            $this->callModel->removeDonor($data);
+            // $this->view('pages/Admin');
+            header('location:' . URLROOT . '/' . 'UserController/Admin');
+
+        }
+
+        public function Admin()
+        {
+            $data = $this->callModel->getDonor();
+            $this->view('pages/Admin',$data);
+
+        }
     }
 
 

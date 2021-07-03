@@ -21,4 +21,13 @@ class UserModel {
         return $result;
       
     }
+
+    public function removeDonor($data)
+    {
+        $this->database->query("DELETE FROM `donor` WHERE id = :id ");
+        $this->database->bind(':id', $data ['id']);
+
+        $row = $this->database->single();
+        return $row;
+    }
 }
