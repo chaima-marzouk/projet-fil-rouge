@@ -22,16 +22,10 @@
             ]; 
             $this->callModel->removeDonor($data);
             // $this->view('pages/Admin');
-            header('location:' . URLROOT . '/' . 'UserController/Admin');
+            header('location:' . URLROOT . '/' . 'UserController/index');
 
         }
 
-        public function Admin()
-        {
-            $data = $this->callModel->getDonor();
-            $this->view('pages/Admin',$data);
-
-        }
     }
 
 
