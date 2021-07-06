@@ -35,6 +35,12 @@
             $this->view('pages/Post');
         }
 
+        
+        public function profil()
+        {
+            $this->view('pages/Profil');
+        }
+
         public function rendezvous()
         {
             $this->view('pages/Rendezvous');
