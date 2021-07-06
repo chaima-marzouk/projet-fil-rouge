@@ -48,7 +48,7 @@
           </div>
         </div>
         <li><a href="<?php echo URLROOT ; ?>/UserController/test">Pages</a></li>
-        <li><a href="#">Profil</a></li> 
+        <li><a href="">Profil</a></li> 
          <li><a href="#">test2</a></li> 
         
     </ul> 
@@ -69,7 +69,7 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="<?php echo URLROOT;?>/UserController/Post">posts</a></li>
-                  <li><a class="dropdown-item" href="#">Redez-vous</a></li>
+                  <li><a class="dropdown-item" href="<?php echo URLROOT ; ?>/UserController/rendezvous">Redez-vous</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
