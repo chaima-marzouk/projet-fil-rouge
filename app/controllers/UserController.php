@@ -25,6 +25,15 @@
             header('location:' . URLROOT . '/' . 'UserController/index');
 
         }
+        public function test()
+        {
+            $this->view('pages/EditPost');        
+        }
+
+        public function post()
+        {
+            $this->view('pages/Post');
+        }
 
     }
 
