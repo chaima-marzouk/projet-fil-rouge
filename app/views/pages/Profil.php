@@ -18,8 +18,8 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link active" style="margin-left:91px;" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item dropdown">
+                </li>
+                <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Dropdown
                 </a>
@@ -42,7 +42,7 @@
 
 </div>
 <div class="sidebar">
-    <header><img src="..." class="card-img-top" alt="..."></header>
+    <header><img src="<?php  echo URLROOT?>/img/no.png" class="card-img-top" style="width: 34%; margin:6px" alt="..."></header>
     
 </div>
 
@@ -56,8 +56,19 @@
 </div>
 <h3>Account</h3>
 
-<form action="">
-  <input type="text" name="" id="">
+<form style="margin: 0px 116px;">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
 
