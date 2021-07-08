@@ -31,32 +31,28 @@
                 </ul>
               </li> 
             </ul>
-              <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-danger" type="submit">Search</button>
-              <!-- <i class="far fa-comment-dots"></i> -->
-            </form>
           </div>
         </div>
       </nav>
 
 </div>
 <div class="sidebar">
-    <header><img src="<?php  echo URLROOT?>/img/no.png" class="card-img-top" style="width: 34%; margin:6px" alt="..."></header>
+    <header><img src="<?php  echo URLROOT?>/img/no.png" class="card-img-top" style="width: 60%; margin:6px" alt="..."></header>
     
 </div>
 
 
 <div class="container"> 
   <h1>Chaima Marzouk</h1>
-    <div style="display: flex;">
+    <div style="display: flex; ">
       <a href="#">marzouk.chaima.892@gmail</a>
       <p>-Admin</p>
     </div>
 </div>
-<h3>Account</h3>
 
-<form style="margin: 0px 116px;">
+
+<form style="margin: 0px 116px;margin-top: 115px;">
+ <h3>Account</h3>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
