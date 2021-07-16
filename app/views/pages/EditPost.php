@@ -35,7 +35,7 @@
 </nav>
 
 
- <script >var $els = $('.menu a, .menu header');
+ <!-- <script >var $els = $('.menu a, .menu header');
 var count = $els.length;
 var grouplength = Math.ceil(count/3);
 var groupNumber = 0;
@@ -67,6 +67,6 @@ setTimeout(function(){
     setTimeout(function(){
         $('.menu footer button').click();
     }, (count * 100) + 500 );
-}, 1000);</script>   
+}, 1000);</script>    -->
 </body>
 </html>

@@ -43,41 +43,14 @@
           </div>
         </div>
       </nav>
-    <div class="container" style="display:flex">
-        <div class="card" style="width: 18rem; margin: 20px;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
-        </ul>
-        <div class="card-body">
-            <a href="#"  class="card-link text-success">Edit</a>
-            <a href="#" class="card-link text-danger">Delete</a>
-        </div>
-        </div>
-
-        <div class="card" style="width: 18rem; margin: 20px;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
-        </ul>
-        <div class="card-body">
-            <a href="#"  class="card-link text-success">Edit</a>
-            <a href="#" class="card-link text-danger">Delete</a>
-        </div>
-        </div>
-    </div>
+      <table class="table">
+  <thead class="table-dark">
+    ...
+  </thead>
+  <tbody>
+    ...
+  </tbody>
+</table>   
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
