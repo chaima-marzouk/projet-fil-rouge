@@ -27,7 +27,7 @@ p{
 }
 
 img{
-    width: 100%;
+    width: 20%;
     max-width: 100%;
     height: auto;
 }
@@ -36,9 +36,9 @@ section{
     padding: 5rem 0;
 }
 
-body{
+/* body{
     background-color: cornflowerblue;
-}
+} */
 
 header{
     width: 100%;
@@ -46,7 +46,7 @@ header{
      position: absolute;
     top: 0;
     left: 0;
-    z-index: 1; 
+    /* z-index: 1;  */
 
 }
 
@@ -86,9 +86,10 @@ nav{
 }
 
 .nav-list{
-    width: 25rem;
+    width: 22rem;
     height: 100vh;
-    background-color: rgb(150, 182, 240);
+    background-color: #A2DBFA;
+    color: #fafafa;
     position: fixed;
     top: 0;
     right: -26rem;
@@ -102,8 +103,10 @@ nav{
 }
 
 .nav-list.active{
+
     right: 0;
 }
+
 
 
 .close{
@@ -115,6 +118,7 @@ nav{
 
 .nav-item{
     margin: 1.5rem 0;
+    color: #fafafa;
 
 }
 
@@ -127,7 +131,55 @@ nav{
 /* hero */
 .hero{
     width: 100%;
-    height: 88vh;
+    height: 83vh;
 }
 
+.main-message{
+    width: 92%;
+    max-width: 50rem;
+    color: #fafafa;
+    text-transform: uppercase;
+    transform: translateY(20%);
+
+
+}
+
+.main-mesaage h3{
+    font-size: 1.6rem;
+}
+
+.main-mesaage h3{
+    font-family: 'Aldrich' , sans-serif;
+    font-size: 4rem;
+    margin: 1rem 0;
+}
+.main-mesaage p{
+    text-transform: lowercase;
+}
+
+.btn{
+    background-color: #eb648c;
+    border-radius: 2rem;
+    color: #fafafa;
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2.5rem;
+    text-transform: uppercase;
+    transition: background-color 650ms;
+}
+
+.btn:hover{
+    background-color: #dd295f;
+
+}
+
+.experience-outdoors{
+    padding: 0;
+}
+
+.tittle-heading{
+    text-align: center;
+    text-transform: uppercase;
+    
+}
 

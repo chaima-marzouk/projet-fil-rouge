@@ -48,21 +48,58 @@
         </ul>
     </header>
 
-    <section class="hero" style=" background-image:url(<?=URLROOT?>/img/testo.jpg);">
-        
+    <main>
+    <section class="hero">
         <div class="container">
             <div class="main-message">
-                <h3>test</h3>
-                <h1>testng if that works or not</h1>
+                <h3>#Give blood</h3>
+                <h1>DONATE BLOOD | SAVE A LIFE</h1>
                 <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, alias, eius quae sint nesciunt animi nulla blanditiis veritatis distinctio maxime cumque nemo corporis, recusandae rem magnam aspernatur molestiae voluptatem perferendis!
+                Sometimes we tend to forget how easy can be to help another human been but this page manages to remind us. By highlighting the simplicity of the process, the slogan has also the merit to comfort and convince people that are afraid of donating blood to give it a try
                 </p>
                 <div class="cta">
-                    <a href="" class="btn">test now</a>
+                    <a href="" class="btn">Donate now</a>
                 </div>
             </div>
         </div>
     </section>
+
+    <section class="experience-outdoors">
+        <div class="container">
+            <div class="tittle-hedding">
+                <h3>experiance</h3>
+                <h1>the test bla bla</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, autem quisquam explicabo doloremque maxime saepe ipsum quaerat perferendis architecto eaque cumque aliquid delectus ducimus. Consequuntur saepe beatae dolorum tempore libero.</p>
+            </div>
+
+            <div class="activities-gride">
+                <!-- grid item n 1 -->
+                <div class="activities-grid-item star-gazing">
+                    <i class="icon ion-md-star"></i>
+                    <h1>Test tittle</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem error eum tempore praesentium, non repellat! Atque, perferendis. Nobis fuga qui, impedit, vero ducimus fugit expedita tempore voluptatum, numquam explicabo excepturi.</p>
+
+                     <!-- grid item n 2 -->
+                <div class="activities-grid-item star-gazing">
+                    <i class="icon ion-md-compass"></i>
+                    <h1>Test tittle 2</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem error eum tempore praesentium, non repellat! Atque, perferendis. Nobis fuga qui, impedit, vero ducimus fugit expedita tempore voluptatum, numquam explicabo excepturi.</p>
+
+                     <!-- grid item n 3 -->
+                <div class="activities-grid-item star-gazing">
+                    <i class="icon ion-md-bonfire"></i>
+                    <h1>Test tittle 3</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem error eum tempore praesentium, non repellat! Atque, perferendis. Nobis fuga qui, impedit, vero ducimus fugit expedita tempore voluptatum, numquam explicabo excepturi.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    </main>
+
+
 
 
 
@@ -84,6 +121,29 @@
      selectElement('.nav-list').classList.remove('active');
      });
     </script>
+
+    <style>
+        .hero{
+            background-image:url(<?=URLROOT?>/img/testo2.jpg)
+        }
+
+        .hero::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 4.7rem;
+            background-size:cover;
+            background: url(<?=URLROOT?>/img/wave-small.png) center no-repeat 
+            
+        }
+
+        .ion-md-close:before {
+            
+            color: #fafafa;
+        }
+    </style>
 
 </body>
 </html>
