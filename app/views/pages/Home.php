@@ -10,6 +10,8 @@
     <!--Google Fonts-->
      <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css?family=Aldrich&display=swap" rel="stylesheet">
+     <!-- stylesheet -->
+     <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/home.css">
 </head>
 <body>
     <header>
@@ -58,5 +60,27 @@
             </div>
         </div>
     </section>
+
+
+
+
+
+    <script type="text/javascript" >
+        // Function expression to select elements.
+     const selectElement = (s) => document.querySelector(s);
+
+
+        //Open the menu on click
+     selectElement('.open').addEventListener('click', () => {
+     selectElement('.nav-list').classList.add('active');
+    });
+
+
+        //Close the menu on click
+     selectElement('.close').addEventListener('click', () => {
+     selectElement('.nav-list').classList.remove('active');
+     });
+    </script>
+
 </body>
 </html>

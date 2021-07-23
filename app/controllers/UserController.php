@@ -12,7 +12,7 @@
                 "donors" => $donors,
 
             ];
-            $this->view('pages/Admin',$data);
+            $this->view('pages/Home',$data);
         } 
         
         public function delete()
