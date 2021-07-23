@@ -18,14 +18,16 @@
         <div class="container">
             <nav>
                 <div class="nav-barand">
-                    <img src="" alt="LOGO">
+                    <img src="<?php echo URLROOT; ?>/img/logob.png" alt="LOGO">
+                </div>
+                <div class="menu-icons open">
+                    <i class="icon ion-md-menu" style="margin-right: 30px;"></i>
                 </div>
             </nav>
-        </div>
 
-        <div class="menu-icons open">
-            <i class="icon ion-md-menu"></i>
         </div>
+ 
+        
 
         <ul class="nav-list">
             <div class="menu-icons close">
