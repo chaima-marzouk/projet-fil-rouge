@@ -45,6 +45,10 @@
         {
             $this->view('pages/Rendezvous');
         }
+        public function admin_signin()
+        {
+            $this->view('pages/Admin_login');
+        }
     }
 
         
