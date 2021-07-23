@@ -82,13 +82,13 @@ nav-brand{
 }
 
 .close i{
-    color: seagreen;
+    color: rgb(0, 0, 0);
 }
 
 .nav-list{
     width: 25rem;
     height: 100vh;
-    background-color: seagreen;
+    background-color: rgb(150, 182, 240);
     position: fixed;
     top: 0;
     right: -26rem;
@@ -122,6 +122,15 @@ nav-brand{
     font-size: 1.5rem;
     text-transform: uppercase;
     color: rgba(0, 0, 0, 7);
+}
+
+/* hero */
+.hero{
+    width: 100%;
+    height: 88vh;
+    background:linear-gradient(135deg, rgba(49,24,131,0,0.9) 0%, rgb(72,56,149,0.8) 100%), url("/public/img/cover.jpg") center no-repeat;
+    background-size: cover;
+    position: r;
 }
 
 

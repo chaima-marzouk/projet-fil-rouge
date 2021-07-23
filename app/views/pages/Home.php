@@ -47,6 +47,7 @@
     </header>
 
     <section class="hero">
+        
         <div class="container">
             <div class="main-message">
                 <h3>test</h3>
