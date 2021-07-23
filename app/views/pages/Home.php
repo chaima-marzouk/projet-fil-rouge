@@ -11,7 +11,7 @@
      <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css?family=Aldrich&display=swap" rel="stylesheet">
      <!-- stylesheet -->
-     <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/home.css">
+     <link rel="stylesheet" type="text/css" href="<?php echo URLROOT; ?>/css/styleHome.css">
 </head>
 <body>
     <header>
@@ -46,7 +46,7 @@
         </ul>
     </header>
 
-    <section class="hero">
+    <section class="hero" style=" background-image:url(<?=URLROOT?>/img/testo.jpg);">
         
         <div class="container">
             <div class="main-message">
