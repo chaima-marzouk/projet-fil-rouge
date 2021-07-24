@@ -230,5 +230,67 @@ nav{
     background-image: fixed;
 }
 
+.test-text-box{
+    /* position: absolute;
+    top: -8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 8rem; */
+    color: rgb(0, 0, 0);
+    /* opacity: .5;
+    z-index: -1; */
+}
+
+/* .test-donor img{
+    width: 100%;
+} */
+
+.titre-cards{
+    margin-left: 26%;
+    color: rgb(0 123 255 / 50%);
+}
+
+.icon-container {
+    margin: 30px 51px;
+    padding: 23px;
+}
+
+.icon-container img {
+    width: 74%;
+    max-width: 100%;
+    height: auto;
+}
+
+.titre-icons{
+    color: rgb(0 123 255 / 50%);
+    margin: 15%;
+    text-transform: uppercase;
+    font-size: 2rem;
+    /* transform: translateY(10%); */
+}
+
+.tooltip1 img:hover .tooltiptext {
+    visibility: visible;
+  }
+   .tooltip1 .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+  }
+
+
+
+
 
 

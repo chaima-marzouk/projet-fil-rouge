@@ -69,11 +69,14 @@
 
     <section class="experience-outdoors">
          <!-- <div class="container "> -->
+             
 
             <div class="activities-gride">
+                
                 <!-- grid item n 1 -->
                 <div class="activities-grid-item star-gazing">
-                <div class="card text-center" style="width: 18rem; margin-left: 90px; margin-top: 100px;">
+                <h1 class="titre-cards">You must know</h1>
+                <div class="card text-center" style="width: 18rem; margin-left: 90px; margin-top: 18px;">
                 <img src="<?=URLROOT?>/img/ask1.png" class="card-img-top" style="width: 100%; " alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
@@ -84,7 +87,7 @@
 
                      <!-- grid item n 2 -->
                 <div class="activities-grid-item star-gazing">
-                <div class="card text-center" style="width: 18rem; margin-left: 90px; margin-top: 43px;">
+                <div class="card text-center" style="width: 18rem; margin-left: 90px; margin-top: 18px;">
                 <img src="<?=URLROOT?>/img/ask2.jpg" class="card-img-top" style="width: 100%; " alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
@@ -94,7 +97,7 @@
                 </div>
                      <!-- grid item n 3 -->
                 <div class="activities-grid-item star-gazing">
-                <div class="card text-center" style="width: 18rem; margin-left: 90px; margin-top: 43px;">
+                <div class="card text-center" style="width: 18rem; margin-left: 90px; margin-top: 18px;">
                 <img src="<?=URLROOT?>/img/ask3.jpg" class="card-img-top" style="width: 100%; " alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
@@ -107,16 +110,27 @@
         </div>
     </section>
 
+    <section class="icon-container">
+    <h1 class="titre-icons">Our services</h1>
+        <div class="test-donor" style="display: flex;">
+             <div class="tooltip1">
+                <a href=""><img src="<?=URLROOT?>/img/donor.png" alt=""></a>
+                <span class="tooltiptext">Tooltip text</span>
+             </div>
+
+             <a href=""><img src="<?=URLROOT?>/img/blood-bag.png" alt=""></a>
+             <a href=""><img src="<?=URLROOT?>/img/communicate.png"alt=""></a>
+        </div>
+    </section>
+
     <section class="tests">
         <div class="container2">
             <div class="test">
                 <div class="test-text-box">
-                    <p>Donors List</p>
+                    <!-- <p>Donors List</p> -->
                     <ion-icon name="add-circle-outline"></ion-icon>
                 </div>
-                <div class="test-donor">
-                    <img src="<?=URLROOT?>/img/donor.png" alt="">
-                </div>
+               
             </div>
         </div>
 
@@ -202,6 +216,10 @@
                 height: 4.7rem;
                 background-size: cover;
                 background-image: url(<?=URLROOT?>/img/wave-small-reversed.png)
+            }
+
+            h1{
+                margin-top: 20px;
             }
     </style>
 
