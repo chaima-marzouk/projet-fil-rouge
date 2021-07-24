@@ -112,7 +112,7 @@
             <div class="test">
                 <div class="test-text-box">
                     <p>Donors List</p>
-                    <!-- <img src="<?=URLROOT?>/img/donor.png" alt=""> -->
+                    <ion-icon name="add-circle-outline"></ion-icon>
                 </div>
                 <div class="test-donor">
                     <img src="<?=URLROOT?>/img/donor.png" alt="">
@@ -150,7 +150,7 @@
 
     <style>
         .hero{
-            background-image:url(<?=URLROOT?>/img/testo2.jpg)
+            background:url(<?=URLROOT?>/img/testo2.jpg) fixed
         }
 
         .hero::before{
