@@ -221,6 +221,16 @@
             h1{
                 margin-top: 20px;
             }
+
+            @media screen and (min-width: 540px){
+      .card{
+        width: 28rem;
+      };
+
+      .hero{
+          display: none;
+      };
+  }
     </style>
 
 </body>
