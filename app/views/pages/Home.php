@@ -12,11 +12,14 @@
      <link href="https://fonts.googleapis.com/css?family=Aldrich&display=swap" rel="stylesheet">
      <!-- stylesheet -->
      <link rel="stylesheet" type="text/css" href="<?php echo URLROOT; ?>/css/styleHome.css">
+     <!-- bootstrap -->
+     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 </head>
 <body>
     <header>
         <div class="container">
-            <nav>
+            <nav style="display: flex;">
                 <div class="nav-barand">
                     <img src="<?php echo URLROOT; ?>/img/logob.png" alt="LOGO">
                 </div>
@@ -58,39 +61,47 @@
                 Sometimes we tend to forget how easy can be to help another human been but this page manages to remind us. By highlighting the simplicity of the process, the slogan has also the merit to comfort and convince people that are afraid of donating blood to give it a try
                 </p>
                 <div class="cta">
-                    <a href="" class="btn">Donate now</a>
+                    <a href="" class="btnn">Donate now</a>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="experience-outdoors">
-        <div class="container">
-            <div class="tittle-hedding">
-                <h3>experiance</h3>
-                <h1>the test bla bla</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, autem quisquam explicabo doloremque maxime saepe ipsum quaerat perferendis architecto eaque cumque aliquid delectus ducimus. Consequuntur saepe beatae dolorum tempore libero.</p>
-            </div>
+         <!-- <div class="container "> -->
 
             <div class="activities-gride">
                 <!-- grid item n 1 -->
                 <div class="activities-grid-item star-gazing">
-                    <i class="icon ion-md-star"></i>
-                    <h1>Test tittle</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem error eum tempore praesentium, non repellat! Atque, perferendis. Nobis fuga qui, impedit, vero ducimus fugit expedita tempore voluptatum, numquam explicabo excepturi.</p>
+                <div class="card text-center" style="width: 18rem; margin-left: 90px; margin-top: 100px;">
+                <img src="<?=URLROOT?>/img/ask1.png" class="card-img-top" style="width: 100%; " alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <button type="button" class="btn btn-outline-info">Get your answer</button>
+                    </div>
+                </div>
 
                      <!-- grid item n 2 -->
                 <div class="activities-grid-item star-gazing">
-                    <i class="icon ion-md-compass"></i>
-                    <h1>Test tittle 2</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem error eum tempore praesentium, non repellat! Atque, perferendis. Nobis fuga qui, impedit, vero ducimus fugit expedita tempore voluptatum, numquam explicabo excepturi.</p>
-
+                <div class="card text-center" style="width: 18rem; margin-left: 90px; margin-top: 43px;">
+                <img src="<?=URLROOT?>/img/ask2.jpg" class="card-img-top" style="width: 100%; " alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <button type="button" class="btn btn-outline-info">Get your answer</button>
+                    </div>
+                </div>
                      <!-- grid item n 3 -->
                 <div class="activities-grid-item star-gazing">
-                    <i class="icon ion-md-bonfire"></i>
-                    <h1>Test tittle 3</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem error eum tempore praesentium, non repellat! Atque, perferendis. Nobis fuga qui, impedit, vero ducimus fugit expedita tempore voluptatum, numquam explicabo excepturi.</p>
-
+                <div class="card text-center" style="width: 18rem; margin-left: 90px; margin-top: 43px;">
+                <img src="<?=URLROOT?>/img/ask3.jpg" class="card-img-top" style="width: 100%; " alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <button type="button" class="btn btn-outline-info">Get your answer</button>
+                    </div>
+                </div>
                 </div>
             </div>
         </div>
@@ -133,17 +144,32 @@
             left: 0;
             bottom: 0;
             width: 100%;
-            height: 4.7rem;
+            height: 8.7rem;
             background-size:cover;
             background: url(<?=URLROOT?>/img/wave-small.png) center no-repeat 
             
         }
 
         .ion-md-close:before {
-            
+
             color: #fafafa;
         }
+
+        .activities-grid-item::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 97%; 
+            background-color: #63a4ff;
+            background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
+            z-index: -1;
+        }
     </style>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> -->
 
 </body>
 </html>

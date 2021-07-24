@@ -55,7 +55,8 @@ header{
     max-width: 98rem;
     margin: 0 auto;
     padding: 0 1.5rem;
-
+    display: flex;
+    
 }
 
 
@@ -131,7 +132,7 @@ nav{
 /* hero */
 .hero{
     width: 100%;
-    height: 83vh;
+    height: 95vh;
 }
 
 .main-message{
@@ -146,18 +147,20 @@ nav{
 
 .main-mesaage h3{
     font-size: 1.6rem;
+    margin-top: 37px;
 }
 
 .main-mesaage h3{
     font-family: 'Aldrich' , sans-serif;
     font-size: 4rem;
     margin: 1rem 0;
+    
 }
 .main-mesaage p{
     text-transform: lowercase;
 }
 
-.btn{
+.btnn{
     background-color: #eb648c;
     border-radius: 2rem;
     color: #fafafa;
@@ -168,7 +171,7 @@ nav{
     transition: background-color 650ms;
 }
 
-.btn:hover{
+.btnn:hover{
     background-color: #dd295f;
 
 }
@@ -180,6 +183,46 @@ nav{
 .tittle-heading{
     text-align: center;
     text-transform: uppercase;
-    
+    margin-bottom: 10rem;
+    color: rgba(0, 0, 0,.7);
+}
+
+.tittle-hedding h3{
+    font-size: 1.4rem;
+}
+
+.tittle-hedding h1{
+    font-family: 'Aldrich', sans-serif;
+    font-size: 2rem;
+    margin: 5rem 0 1rem;
+}
+
+
+.tittle-hedding p{
+    text-transform: lowercase;
+}
+
+.activities-gride{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-row-gap: 2.5rem;
+}
+.activities-gride-item{
+    height: 40rem;
+    padding: 5rem;
+    /* color: #fafafa; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+
+}
+
+.card-img-top {
+    width: 79%;
+    max-width: 100%;
+    height: auto;
 }
 
