@@ -107,6 +107,21 @@
         </div>
     </section>
 
+    <section class="tests">
+        <div class="container2">
+            <div class="test">
+                <div class="test-text-box">
+                    <p>Donors List</p>
+                    <!-- <img src="<?=URLROOT?>/img/donor.png" alt=""> -->
+                </div>
+                <div class="test-donor">
+                    <img src="<?=URLROOT?>/img/donor.png" alt="">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
 
     </main>
 
@@ -117,20 +132,20 @@
 
 
     <script type="text/javascript" >
-        // Function expression to select elements.
-     const selectElement = (s) => document.querySelector(s);
+                // Function expression to select elements.
+            const selectElement = (s) => document.querySelector(s);
 
 
-        //Open the menu on click
-     selectElement('.open').addEventListener('click', () => {
-     selectElement('.nav-list').classList.add('active');
-    });
+                //Open the menu on click
+            selectElement('.open').addEventListener('click', () => {
+            selectElement('.nav-list').classList.add('active');
+            });
 
 
-        //Close the menu on click
-     selectElement('.close').addEventListener('click', () => {
-     selectElement('.nav-list').classList.remove('active');
-     });
+                //Close the menu on click
+            selectElement('.close').addEventListener('click', () => {
+            selectElement('.nav-list').classList.remove('active');
+            });
     </script>
 
     <style>
@@ -166,10 +181,29 @@
             background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
             z-index: -1;
         }
-    </style>
 
-<!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> -->
+        .tests{
+            width: 100%;
+            height: 80vh;
+            margin-top: 45px;
+            background-size: cover;
+            position: relative;
+            background:url(<?=URLROOT?>/img/donlist.png)  center no-repeat fixed 
+            
+            }
+
+            .tests::before{
+                content:"";
+                margin-top: -2px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 4.7rem;
+                background-size: cover;
+                background-image: url(<?=URLROOT?>/img/wave-small-reversed.png)
+            }
+    </style>
 
 </body>
 </html>
