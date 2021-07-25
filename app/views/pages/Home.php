@@ -10,6 +10,10 @@
     <!--Google Fonts-->
      <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css?family=Aldrich&display=swap" rel="stylesheet">
+     <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
      <!-- stylesheet -->
      <link rel="stylesheet" type="text/css" href="<?php echo URLROOT; ?>/css/styleHome.css">
      <!-- bootstrap -->
@@ -130,8 +134,20 @@
         <div class="container2">
             <div class="test">
                 <div class="test-text-box">
-                    <!-- <p>Donors List</p> -->
-                    <ion-icon name="add-circle-outline"></ion-icon>
+                <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
                 </div>
                
             </div>
@@ -224,6 +240,13 @@
             h1{
                 margin-top: 20px;
             }
+            .social-media {
+                display: flex;
+                margin: 0 51%;
+            }
+            /* .social-icon{
+                margin: 20%;
+            } */
     </style>
 
 </body>
