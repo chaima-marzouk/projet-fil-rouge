@@ -52,46 +52,50 @@
         </div>
       </nav>
 
-<table class="table table-sm" style="margin: 5% 20%;">
-  <thead>
-  
-    <tr>
-       
-      <th scope="col">#</th>
-      <th scope="col">Full name</th>
-      <th scope="col">CND</th>
-      <th scope="col">Adress</th>
-      <th scope="col">Blood G.</th>
-      <th scope="col">Phone nember</th>
-      <th scope="col">age</th>
-      <th scope="col">Delete</th>
-    </tr>
-  </thead>
-  
-  <tbody>
-     <?php foreach ($data["donors"] as $row) :?>
-       <tr>
-    
-         <td><?php echo $row->id ;?></td>
-       
-            <td><?php echo $row->full_name ;?></td>
-            <td><?php echo $row->cdn ;?></td>
-            <td><?php echo $row->adress ;?></td>
-            <td><?php echo $row->blood_group ;?></td>
-            <td><?php echo $row->phone ;?></td>
-            <td><?php echo $row->age ;?></td>
-            <td><a href="<?php echo URLROOT;?>/UserController/delete?id=<?php echo $row->id;?>" button type="submit" name="delete" class="btn btn-danger">Delete</button></a></td>
-      
-      </tr>
-    <?php endforeach ?>
-   
-  </tbody>
-  
-</table>
+      <div style="overflow-x:auto;">
+            <table>
+                <tr>
+                <th scope="col">Full name</th>
+                <th scope="col">CND</th>
+                <th scope="col">Adress</th>
+                <th scope="col">Blood G.</th>
+                <th scope="col">Phone nember</th>
+                <th scope="col">age</th>
+                <th scope="col">Delete</th>
+            
+                </tr>
+                    <?php foreach ($data["donors"] as $row) :?>
+                <tr>
+                <td><?php echo $row->full_name ;?></td>
+                        <td><?php echo $row->cdn ;?></td>
+                        <td><?php echo $row->adress ;?></td>
+                        <td><?php echo $row->blood_group ;?></td>
+                        <td><?php echo $row->phone ;?></td>
+                        <td><?php echo $row->age ;?></td>
+                        <td><a href="<?php echo URLROOT;?>/UserController/delete?id=<?php echo $row->id;?>" button type="submit" name="delete" class="btn btn-danger">Delete</button></a></td>
+                </tr>
+                <?php endforeach ?>
+
+            </table>
+    </div>
 
 
     
+<style>
+   table {
+     border-collapse: collapse;
+     border-spacing: 0;
+     width: 100%;
+     border: 1px solid #ddd;
+        }
 
+    th, td {
+     text-align: left;
+     padding: 8px;
+         }
+
+    tr:nth-child(even){background-color: #f2f2f2}
+</style>
 
 
 

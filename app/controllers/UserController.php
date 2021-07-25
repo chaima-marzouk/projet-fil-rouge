@@ -12,7 +12,8 @@
                 "donors" => $donors,
 
             ];
-            $this->view('pages/Admin',$data);
+            $this->view('pages/Home',$data);
+            $this->view('pages/donors-liste',$data);
         } 
         
         public function delete()
@@ -50,7 +51,12 @@
             $this->view('pages/Admin_login');
         }
         public function donorsliste(){
-            $this->view('pages/donors-liste');
+            $donors = $this->callModel->getDonor();
+            $data = [
+                "donors" => $donors,
+
+            ];
+            $this->view('pages/donors-liste',$data);
         }
     }
 

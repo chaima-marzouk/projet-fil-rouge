@@ -290,6 +290,42 @@ nav{
     margin-left: -60px;
   }
 
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 98%;
+    border: 1px solid #ddd;
+    margin-left: 20px;
+    }
+
+    th, td {
+    text-align: left;
+    padding: 8px;
+    }
+
+    tr:nth-child(even){background-color: #6bbce2}
+
+    .table-title {
+        font-size: 20vh;
+        margin-left: 13%;
+        font-family: 'Merriweather', serif;
+    }
+
+    p.table-title2 {
+        font-size: 6vh;
+        /* text-underline-offset: inherit; */
+        text-decoration: underline overline #FF3028;
+        margin-left: 30%;
+        margin-bottom: 3%;
+    }
+
+    span{
+        background: rgb(107,188,226);
+        background: linear-gradient(0deg, rgba(107,188,226,1) 43%, rgba(255,48,40,1) 100%);
+    }
+
+    /* table-title-background-image */
+   
   
   
 

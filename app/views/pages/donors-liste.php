@@ -12,6 +12,7 @@
      <link href="https://fonts.googleapis.com/css?family=Aldrich&display=swap" rel="stylesheet">
      <!-- stylesheet -->
      <link rel="stylesheet" type="text/css" href="<?php echo URLROOT; ?>/css/styleHome.css">
+     <link rel="stylesheet" type="text/css" href="<?php echo URLROOT; ?>/css/style.scss">
      <!-- Bootstrap -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
@@ -30,8 +31,6 @@
 
         </div>
  
-        
-
         <ul class="nav-list">
             <div class="menu-icons close">
                 <i class="icon ion-md-close"></i>
@@ -69,58 +68,41 @@
 
     <section class="experience-outdoors">
          <!-- <div class="container "> -->
-             
-
             <div class="activities-gride">    
                 <!-- grid item  -->
-                <div class="activities-grid-item star-gazing">
-                
+                <div class="activities-grid-item star-gazing">    
                 </div>
             </div>
-        </div>
+        <!-- </div> -->
     </section>
 
     <section>
-    <table class="table table-sm" style="margin: 5% 20%;">
-  <thead>
-  
-    <tr>
-       
-      <th scope="col">#</th>
-      <th scope="col">Full name</th>
-      <th scope="col">CND</th>
-      <th scope="col">Adress</th>
-      <th scope="col">Blood G.</th>
-      <th scope="col">Phone nember</th>
-      <th scope="col">age</th>
-      <th scope="col">Delete</th>
-    </tr>
-  </thead>
-  
-  <tbody>
-     <?php foreach ($data["donors"] as $row) :?>
-       <tr>
-    
-         <td><?php echo $row->id ;?></td>
-       
-            <td><?php echo $row->full_name ;?></td>
-            <td><?php echo $row->cdn ;?></td>
-            <td><?php echo $row->adress ;?></td>
-            <td><?php echo $row->blood_group ;?></td>
-            <td><?php echo $row->phone ;?></td>
-            <td><?php echo $row->age ;?></td>
-            <td><a href="<?php echo URLROOT;?>/UserController/delete?id=<?php echo $row->id;?>" button type="submit" name="delete" class="btn btn-danger">Delete</button></a></td>
-      
-      </tr>
-    <?php endforeach ?>
-   
-  </tbody>
-  
-</table>
+        <p class="table-title">Be the hero today<span>!</span> </p>
+        <p class="table-title2">Add your name to the donors list</p>
+        <div style="overflow-x:auto;">
+            <table>
+                <tr>
+                <th scope="col">Full name</th>
+                <th scope="col">CND</th>
+                <th scope="col">Adress</th>
+                <th scope="col">Blood G.</th>
+                <th scope="col">Phone nember</th>
+                <th scope="col">age</th>
+                </tr>
+                    <?php foreach ($data["donors"] as $row) :?>
+                <tr>
+                <td><?php echo $row->full_name ;?></td>
+                        <td><?php echo $row->cdn ;?></td>
+                        <td><?php echo $row->adress ;?></td>
+                        <td><?php echo $row->blood_group ;?></td>
+                        <td><?php echo $row->phone ;?></td>
+                        <td><?php echo $row->age ;?></td>
+                </tr>
+                <?php endforeach ?>
+
+            </table>
+    </div>
     </section>
-
-
-
 
     <section class="tests">
         <div class="container2">
@@ -128,11 +110,9 @@
                 <div class="test-text-box">
                     <!-- <p>Donors List</p> -->
                     <ion-icon name="add-circle-outline"></ion-icon>
-                </div>
-               
+                </div>       
             </div>
         </div>
-
     </section>
 </main>
 
