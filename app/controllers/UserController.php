@@ -13,7 +13,7 @@
 
             ];
             $this->view('pages/Home',$data);
-            $this->view('pages/donors-liste',$data);
+            // $this->view('pages/donors-liste',$data);
         } 
         
         public function delete()

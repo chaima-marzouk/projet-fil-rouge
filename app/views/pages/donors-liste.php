@@ -16,6 +16,9 @@
      <!-- Bootstrap -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <!-- fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 <header>
@@ -46,6 +49,9 @@
             </li>
             <li class="nav-items">
                 <a href="#" class="nav-link">Post</a>
+            </li>
+            <li class="nav-items">
+                <a href="<?php echo URLROOT;?>/UserController/admin_signin" class="nav-link">login</a>
             </li>
         </ul>
     </header>
@@ -78,7 +84,9 @@
 
     <section>
         <p class="table-title">Be the hero today<span>!</span> </p>
-        <p class="table-title2">Add your name to the donors list</p>
+        <p class="table-title2">Add your name to the donors list 
+            <a href=""><i class="icon ion-md-add" style="color:black;"></i></a>
+        </p>
         <div style="overflow-x:auto;">
             <table>
                 <tr>
@@ -103,13 +111,48 @@
             </table>
     </div>
     </section>
+    <section class="form-section">
+    <!-- <h3>Using CSS to style an HTML Form</h3> -->
+        <div class="form-liste">
+            <form action="/action_page.php">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="fullname" placeholder="Your name..">
+
+                <label for="CND">Last Name</label>
+                <input type="text" id="cnd" name="cnd" placeholder="Your identity card..">
+
+                <label for="adress">Adress</label>
+                <input type="text" name="adress" placeholder="Your adress..">
+                <select id="city" name="adress">
+                <option value="agadir">Agadir</option>
+                <option value="casa">Casa</option>
+                <option value="Youssoufia">Youssoufia</option>
+                </select>
+
+
+                <label for="Blood G.">Blood G.</label>
+                <select id="Blood G." name="adress">
+                <option value="AB">AB</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                </select>
+
+
+                <label for="pn">Phone number</label>
+                <input type="text" id="cnd" name="cnd" placeholder="Your phone number..">
+
+                <label for="age">Age</label>
+                <input type="text" id="age" name="age" placeholder="Your phone age..">
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </section>
 
     <section class="tests">
         <div class="container2">
             <div class="test">
                 <div class="test-text-box">
-                    <!-- <p>Donors List</p> -->
-                    <ion-icon name="add-circle-outline"></ion-icon>
                 </div>       
             </div>
         </div>
@@ -151,9 +194,9 @@
             left: 0;
             bottom: 0;
             width: 100%;
-            height: 8.7rem;
+            height: 17.7rem;
             background-size:cover;
-            background: url(<?=URLROOT?>/img/wave-small.png) center no-repeat 
+            background: url(<?=URLROOT?>/img/wave-large.png) center no-repeat 
             
         }
 
@@ -191,14 +234,25 @@
                 top: 0;
                 left: 0;
                 width: 100%;
-                height: 4.7rem;
+                height: 17.7rem;
                 background-size: cover;
-                background-image: url(<?=URLROOT?>/img/wave-small-reversed.png)
+                background-image: url(<?=URLROOT?>/img/wave-large-reversed.png)
             }
 
             h1{
                 margin-top: 20px;
             }
+
+            .form-section{
+                background-size: cover;
+                background-image: fixed ;
+                width: 100%;
+                position: relative;
+                background: url(<?=URLROOT?>/img/testo2.jpg) fixed center
+               
+               
+           }
+        
     </style>
 </body>
 </html>

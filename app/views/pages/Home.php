@@ -47,6 +47,10 @@
             <li class="nav-items">
                 <a href="#" class="nav-link">Post</a>
             </li>
+            <li class="nav-items">
+                <a href="<?php echo URLROOT;?>/UserController/admin_signin" class="nav-link">login</a>
+            </li>
+            
         </ul>
     </header>
 
