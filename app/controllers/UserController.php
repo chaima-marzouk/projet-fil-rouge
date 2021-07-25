@@ -42,9 +42,9 @@
             $this->view('pages/Profil');
         }
 
-        public function rendezvous()
+        public function ContactUs()
         {
-            $this->view('pages/Rendezvous');
+            $this->view('pages/ContactUs');
         }
         public function admin_signin()
         {
