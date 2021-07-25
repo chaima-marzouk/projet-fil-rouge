@@ -52,7 +52,7 @@
         </div>
       </nav>
 
-<!-- <table class="table table-sm" style="margin: 5% 20%;">
+<table class="table table-sm" style="margin: 5% 20%;">
   <thead>
   
     <tr>
@@ -87,7 +87,7 @@
    
   </tbody>
   
-</table> -->
+</table>
 
 
     

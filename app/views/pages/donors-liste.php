@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Document</title>
      <!--Ion Icons-->
      <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     <!--Google Fonts-->
@@ -12,11 +12,12 @@
      <link href="https://fonts.googleapis.com/css?family=Aldrich&display=swap" rel="stylesheet">
      <!-- stylesheet -->
      <link rel="stylesheet" type="text/css" href="<?php echo URLROOT; ?>/css/styleHome.css">
-     <!-- bootstrap -->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+     <!-- Bootstrap -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
+<header>
         <div class="container">
             <nav style="display: flex;">
                 <div class="nav-barand">
@@ -50,7 +51,7 @@
         </ul>
     </header>
 
-    <main>
+<main>
     <section class="hero">
         <div class="container">
             <div class="main-message">
@@ -70,57 +71,56 @@
          <!-- <div class="container "> -->
              
 
-            <div class="activities-gride">
+            <div class="activities-gride">    
+                <!-- grid item  -->
+                <div class="activities-grid-item star-gazing">
                 
-                <!-- grid item n 1 -->
-                <div class="activities-grid-item star-gazing">
-                <h1 class="titre-cards">You must know</h1>
-                <div class="card text-center" style="width: 18rem; margin-left: 90px; margin-top: 18px;">
-                <img src="<?=URLROOT?>/img/ask1.png" class="card-img-top" style="width: 100%; " alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <button type="button" class="btn btn-outline-info">Get your answer</button>
-                    </div>
-                </div>
-
-                     <!-- grid item n 2 -->
-                <div class="activities-grid-item star-gazing">
-                <div class="card text-center" style="width: 18rem; margin-left: 90px; margin-top: 18px;">
-                <img src="<?=URLROOT?>/img/ask2.jpg" class="card-img-top" style="width: 100%; " alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <button type="button" class="btn btn-outline-info">Get your answer</button>
-                    </div>
-                </div>
-                     <!-- grid item n 3 -->
-                <div class="activities-grid-item star-gazing">
-                <div class="card text-center" style="width: 18rem; margin-left: 90px; margin-top: 18px;">
-                <img src="<?=URLROOT?>/img/ask3.jpg" class="card-img-top" style="width: 100%; " alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <button type="button" class="btn btn-outline-info">Get your answer</button>
-                    </div>
-                </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="icon-container">
-    <h1 class="titre-icons">Our services</h1>
-        <div class="test-donor" style="display: flex;">
-             <div class="tooltip1">
-                <a href="<?=URLROOT?>/UserController/donorsliste"><img src="<?=URLROOT?>/img/donor.png" alt=""></a>
-                <span class="tooltiptext">Tooltip text</span>
-             </div>
-
-             <a href=""><img src="<?=URLROOT?>/img/blood-bag.png" alt=""></a>
-             <a href=""><img src="<?=URLROOT?>/img/communicate.png"alt=""></a>
-        </div>
+    <section>
+    <table class="table table-sm" style="margin: 5% 20%;">
+  <thead>
+  
+    <tr>
+       
+      <th scope="col">#</th>
+      <th scope="col">Full name</th>
+      <th scope="col">CND</th>
+      <th scope="col">Adress</th>
+      <th scope="col">Blood G.</th>
+      <th scope="col">Phone nember</th>
+      <th scope="col">age</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+     <?php foreach ($data["donors"] as $row) :?>
+       <tr>
+    
+         <td><?php echo $row->id ;?></td>
+       
+            <td><?php echo $row->full_name ;?></td>
+            <td><?php echo $row->cdn ;?></td>
+            <td><?php echo $row->adress ;?></td>
+            <td><?php echo $row->blood_group ;?></td>
+            <td><?php echo $row->phone ;?></td>
+            <td><?php echo $row->age ;?></td>
+            <td><a href="<?php echo URLROOT;?>/UserController/delete?id=<?php echo $row->id;?>" button type="submit" name="delete" class="btn btn-danger">Delete</button></a></td>
+      
+      </tr>
+    <?php endforeach ?>
+   
+  </tbody>
+  
+</table>
     </section>
+
+
+
 
     <section class="tests">
         <div class="container2">
@@ -134,17 +134,16 @@
         </div>
 
     </section>
-
-
-    </main>
-
+</main>
 
 
 
 
 
 
-    <script type="text/javascript" >
+
+
+<script type="text/javascript" >
                 // Function expression to select elements.
             const selectElement = (s) => document.querySelector(s);
 
@@ -161,7 +160,7 @@
             });
     </script>
 
-    <style>
+<style>
         .hero{
             background:url(<?=URLROOT?>/img/testo2.jpg) fixed
         }
@@ -221,6 +220,5 @@
                 margin-top: 20px;
             }
     </style>
-
 </body>
 </html>

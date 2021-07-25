@@ -12,7 +12,7 @@
                 "donors" => $donors,
 
             ];
-            $this->view('pages/Home',$data);
+            $this->view('pages/Admin',$data);
         } 
         
         public function delete()
@@ -48,6 +48,9 @@
         public function admin_signin()
         {
             $this->view('pages/Admin_login');
+        }
+        public function donorsliste(){
+            $this->view('pages/donors-liste');
         }
     }
 
