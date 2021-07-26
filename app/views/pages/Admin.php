@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/profil.css">
+    <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/styleHome.css">
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
@@ -12,12 +13,12 @@
 </head>
 <body>
 <div class="sidebar">
-    <header>LOGO</header>
-     <ul>
+    <header><img src="<?php echo URLROOT ; ?>/img/logob.png" alt="logo"></header>
+     <!-- <ul>
         <button type="button" class="btn btn-light">Add new Admin</button>  
         <li><a href="<?php echo URLROOT ; ?>/UserController/test">Pages</a></li>
         <li><a href="<?php echo URLROOT ; ?>/UserController/profil">Profil</a></li>   
-    </ul> 
+    </ul>  -->
 </div> 
       <nav class="navbar navbar-expand-lg navbar-light bg-light" style=" margin-left: 249px; margin-top: 20px;">
         <div class="container-fluid">
@@ -35,7 +36,7 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="<?php echo URLROOT;?>/UserController/Post">posts</a></li>
-                  <li><a class="dropdown-item" href="<?php echo URLROOT ; ?>/UserController/rendezvous">Redez-vous</a></li>
+                  <li><a class="dropdown-item" href="<?php echo URLROOT ; ?>/UserController/rendezvous">Rendez-vous</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>

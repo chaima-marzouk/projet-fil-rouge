@@ -134,7 +134,7 @@ form.sign-in-form {
 
 .btn {
   width: 150px;
-  background-color: #5995fd;
+  background-color: rgba(107,188,226,1);
   border: none;
   outline: none;
   height: 49px;

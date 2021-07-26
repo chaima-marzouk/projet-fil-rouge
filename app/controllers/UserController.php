@@ -42,7 +42,7 @@
             $this->view('pages/Profil');
         }
 
-        public function ContactUs()
+        public function contactUs()
         {
             $this->view('pages/ContactUs');
         }

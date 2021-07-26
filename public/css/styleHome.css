@@ -319,10 +319,7 @@ nav{
         margin-bottom: 3%;
     }
 
-    span{
-        background: rgb(107,188,226);
-        background: linear-gradient(0deg, rgba(107,188,226,1) 43%, rgba(255,48,40,1) 100%);
-    }
+   
 
     /* form */
     
@@ -339,7 +336,7 @@ nav{
       
       input[type=submit] {
         width: 100%;
-        background-color: rgba(107,188,226,1);
+        background-color: tab;
         color: white;
         padding: 14px 20px;
         margin: 8px 0;
@@ -358,7 +355,77 @@ nav{
         padding: 20px;
         margin: 0 20%;
       }
-   
+
+      .position{
+          width: 80%;
+          margin:auto;
+          padding: 88px;
+
+      }
+
+      .position iframe{
+          width: 100%;
+      }
+      .contact{
+          width: 80%;
+          margin:auto;
+      }
+     .contact-col{
+         flex-basis: 48%;
+         margin-bottom: 30px;
+     }
+
+     .contact-col div{
+         display: flex;
+         align-items: center;
+         margin-bottom: 40px;
+     }
+
+     .contact-col div fa{
+         font-size: 28px;
+         color: rgb(112, 98, 98);
+         margin: 10px;
+         margin-right: 60px;
+     }
+
+     .contact-col div p{
+        padding: 0;
+     }
+     .contact-col div h5{
+         font-size: 20px;
+         margin-bottom: 5px;
+         color: rgba(107,188,226,1);
+         font-weight: 400;
+     }
+     .contact-col div span{
+         background-color: none;
+     }
+
+     .contact-col input, .contact-col textarea{
+         width: 100%;
+         padding: 15px;
+         margin-bottom: 17px;
+         outline: none;
+         border: 1px solid #ccc;
+         box-sizing: border-box;
+     }
+     .contact-col .contact-button{
+        background-color: white; 
+        color: black; 
+        border: 2px solid #008CBA;
+     }
+     .contact-col.button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
   
   
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>About Us</title>
      <!--Ion Icons-->
      <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     <!--Google Fonts-->
@@ -53,9 +53,6 @@
             <li class="nav-items">
                 <a href="<?php echo URLROOT;?>/UserController/admin_signin" class="nav-link">login</a>
             </li>
-            <li class="nav-items">
-                <a href="<?php echo URLROOT;?>/UserController/ContactUs" class="nav-link">Contact us</a>
-            </li>
         </ul>
     </header>
 
@@ -85,73 +82,6 @@
         <!-- </div> -->
     </section>
 
-    <section>
-        <p class="table-title">Be the hero today<span>!</span> </p>
-        <p class="table-title2">Add your name to the donors list 
-            <a href=""><i class="icon ion-md-add" style="color:black;"></i></a>
-        </p>
-        <div style="overflow-x:auto;">
-            <table>
-                <tr>
-                <th scope="col">Full name</th>
-                <th scope="col">CND</th>
-                <th scope="col">Adress</th>
-                <th scope="col">Blood G.</th>
-                <th scope="col">Phone nember</th>
-                <th scope="col">age</th>
-                </tr>
-                    <?php foreach ($data["donors"] as $row) :?>
-                <tr>
-                <td><?php echo $row->full_name ;?></td>
-                        <td><?php echo $row->cdn ;?></td>
-                        <td><?php echo $row->adress ;?></td>
-                        <td><?php echo $row->blood_group ;?></td>
-                        <td><?php echo $row->phone ;?></td>
-                        <td><?php echo $row->age ;?></td>
-                </tr>
-                <?php endforeach ?>
-
-            </table>
-    </div>
-    </section>
-    <section class="form-section">
-    <!-- <h3>Using CSS to style an HTML Form</h3> -->
-        <div class="form-liste">
-            <form action="/action_page.php">
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" name="fullname" placeholder="Your name..">
-
-                <label for="CND">Last Name</label>
-                <input type="text" id="cnd" name="cnd" placeholder="Your identity card..">
-
-                <label for="adress">Adress</label>
-                <input type="text" name="adress" placeholder="Your adress..">
-                <select id="city" name="adress">
-                <option value="agadir">Agadir</option>
-                <option value="casa">Casa</option>
-                <option value="Youssoufia">Youssoufia</option>
-                </select>
-
-
-                <label for="Blood G.">Blood G.</label>
-                <select id="Blood G." name="adress">
-                <option value="AB">AB</option>
-                <option value="B+">B+</option>
-                <option value="B-">B-</option>
-                </select>
-
-
-                <label for="pn">Phone number</label>
-                <input type="text" id="cnd" name="cnd" placeholder="Your phone number..">
-
-                <label for="age">Age</label>
-                <input type="text" id="age" name="age" placeholder="Your phone age..">
-
-                <input type="submit" value="Submit">
-            </form>
-        </div>
-    </section>
-
     <section class="tests">
         <div class="container2">
             <div class="test">
@@ -163,28 +93,6 @@
 </main>
 
 
-
-
-
-
-
-
-<script type="text/javascript" >
-                // Function expression to select elements.
-            const selectElement = (s) => document.querySelector(s);
-
-
-                //Open the menu on click
-            selectElement('.open').addEventListener('click', () => {
-            selectElement('.nav-list').classList.add('active');
-            });
-
-
-                //Close the menu on click
-            selectElement('.close').addEventListener('click', () => {
-            selectElement('.nav-list').classList.remove('active');
-            });
-    </script>
 
 <style>
         .hero{
@@ -246,19 +154,6 @@
                 margin-top: 20px;
             }
 
-            .form-section{
-                background-size: cover;
-                background-image: fixed ;
-                width: 100%;
-                position: relative;
-                background: url(<?=URLROOT?>/img/testo2.jpg) fixed center
-               
-               
-           }
-           span{
-            background: rgb(107,188,226);
-            background: linear-gradient(0deg, rgba(107,188,226,1) 43%, rgba(255,48,40,1) 100%);
-            }
         
     </style>
 </body>
