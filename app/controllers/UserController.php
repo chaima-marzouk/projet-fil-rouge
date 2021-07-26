@@ -26,21 +26,6 @@
             header('location:' . URLROOT . '/' . 'UserController/index');
 
         }
-        public function test()
-        {
-            $this->view('pages/EditPost');        
-        }
-
-        public function post()
-        {
-            $this->view('pages/Post');
-        }
-
-        
-        public function profil()
-        {
-            $this->view('pages/Profil');
-        }
 
         public function contactUs()
         {
@@ -57,6 +42,10 @@
 
             ];
             $this->view('pages/donors-liste',$data);
+        }
+
+        public function email(){
+            
         }
     }
 

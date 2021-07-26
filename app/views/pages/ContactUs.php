@@ -113,11 +113,11 @@
             </div>
             <div class="contact-col">
 
-            <form action="">
-                <input type="text" placeholder="Enter your name please" required>
-                <input type="email" placeholder="Enter your email please" required>
-                <input type="text" placeholder="Enter your name subject" required>
-                <textarea rows="8" placeholder="Message" required></textarea>
+            <form action="<?php echo URLROOT;?>/UserController/email" method="post">
+                <input type="text" name="name" placeholder="Enter your name please" required>
+                <input type="email" name="email" placeholder="Enter your email please" required>
+                <input type="text" name="subject" placeholder="Enter your name subject" required>
+                <textarea rows="8" name="message" placeholder="Message" required></textarea>
                 <button type="submit" class="contact-button">Send</button>
 
             </form>
