@@ -46,7 +46,7 @@ header{
      position: absolute;
     top: 0;
     left: 0;
-    /* z-index: 1;  */
+    z-index: 1; 
 
 }
 
@@ -426,6 +426,8 @@ nav{
         margin: 4px 2px;
         cursor: pointer;
       }
+
+      /* annimation */
   
   
 

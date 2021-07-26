@@ -45,7 +45,34 @@
         }
 
         public function email(){
-            
+
+        }
+
+
+        public function insert()
+        {
+    
+            if (!isset($_POST['submit'])) {
+                //load the view insert
+                // $this->view('pages/donors-liste');
+                echo("oups");
+                
+            }
+            else {
+                //array qui retourn le resultat envoyé par $_POST
+                $data = [
+                    'full_name' => $_POST['full_name'],
+                    'cdn' => $_POST['cdn'],
+                    'adress' => $_POST['adress'],
+                    'blood_group' => $_POST['blood_group'],
+                    'phone' => $_POST['phone'],
+                    'age' => $_POST['age']
+               ];
+                //consomation du data
+                $this->callModel->addDonor($data);
+                header('location: ' . URLROOT . '/' . 'UserController/donorsliste');
+            }
+          
         }
     }
 

@@ -117,12 +117,12 @@
     <section class="form-section">
     <!-- <h3>Using CSS to style an HTML Form</h3> -->
         <div class="form-liste">
-            <form action="/action_page.php">
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" name="fullname" placeholder="Your name..">
+            <form action="<?php echo URLROOT?>/UserController/insert" method="post">
+                <label for="fname">Full Name</label>
+                <input type="text" id="fname" name="full_name" placeholder="Your name..">
 
-                <label for="CND">Last Name</label>
-                <input type="text" id="cnd" name="cnd" placeholder="Your identity card..">
+                <label for="CND">CDN</label>
+                <input type="text" id="cnd" name="cdn" placeholder="Your identity card..">
 
                 <label for="adress">Adress</label>
                 <input type="text" name="adress" placeholder="Your adress..">
@@ -134,7 +134,7 @@
 
 
                 <label for="Blood G.">Blood G.</label>
-                <select id="Blood G." name="adress">
+                <select id="Blood G." name="blood_group">
                 <option value="AB">AB</option>
                 <option value="B+">B+</option>
                 <option value="B-">B-</option>
@@ -142,12 +142,12 @@
 
 
                 <label for="pn">Phone number</label>
-                <input type="text" id="cnd" name="cnd" placeholder="Your phone number..">
+                <input type="text" id="cnd" name="phone" placeholder="Your phone number..">
 
                 <label for="age">Age</label>
                 <input type="text" id="age" name="age" placeholder="Your phone age..">
 
-                <input type="submit" value="Submit">
+                <input type="submit" name="submit" value="Submit">
             </form>
         </div>
     </section>
