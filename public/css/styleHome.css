@@ -315,7 +315,7 @@ nav{
         font-size: 6vh;
         /* text-underline-offset: inherit; */
         text-decoration: underline overline #FF3028;
-        margin-left: 30%;
+        margin-left: 27%;
         margin-bottom: 3%;
     }
 
@@ -336,8 +336,8 @@ nav{
       
       input[type=submit] {
         width: 100%;
-        background-color: tab;
-        color: white;
+        background-color:rgb(39, 111, 145) ;
+        color: #e0f7fa;
         padding: 14px 20px;
         margin: 8px 0;
         border: none;

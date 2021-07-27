@@ -40,16 +40,16 @@
                 <i class="icon ion-md-close"></i>
             </div>
             <li class="nav-items">
-                <a href="#" class="nav-link">Home</a>
+                <a href="<?php echo URLROOT;?>/UserController/index" class="nav-link" class="nav-link">Home</a>
             </li>
             <li class="nav-items">
-                <a href="#" class="nav-link">About</a>
+                <a href="<?php echo URLROOT;?>/UserController/admin_signin" class="nav-link" class="nav-link">About</a>
             </li>
             <li class="nav-items">
-                <a href="#" class="nav-link">Donate</a>
+                <a href="<?php echo URLROOT;?>/UserController/donorsliste" class="nav-link" class="nav-link">Donate</a>
             </li>
             <li class="nav-items">
-                <a href="#" class="nav-link">Post</a>
+                <a href="<?php echo URLROOT;?>/UserController/admin_signin" class="nav-link"class="nav-link">Post</a>
             </li>
             <li class="nav-items">
                 <a href="<?php echo URLROOT;?>/UserController/admin_signin" class="nav-link">login</a>
@@ -195,9 +195,9 @@
             left: 0;
             bottom: 0;
             width: 100%;
-            height: 8.7rem;
+            height: 17.7rem;
             background-size:cover;
-            background: url(<?=URLROOT?>/img/wave-small.png) center no-repeat 
+            background: url(<?=URLROOT?>/img/wave-large.png) center no-repeat 
             
         }
 
@@ -218,27 +218,19 @@
             z-index: -1;
         }
 
-        .tests{
-            width: 100%;
-            height: 80vh;
-            margin-top: 45px;
-            background-size: cover;
-            position: relative;
-            background:url(<?=URLROOT?>/img/donlist.png)  center no-repeat fixed 
-            
-            }
-
-            .tests::before{
+        .tests::before{
                 content:"";
                 margin-top: -2px;
                 position: absolute;
                 top: 0;
                 left: 0;
                 width: 100%;
-                height: 4.7rem;
+                height: 17.7rem;
                 background-size: cover;
-                background-image: url(<?=URLROOT?>/img/wave-small-reversed.png)
+                background-image: url(<?=URLROOT?>/img/wave-large-reversed.png)
             }
+
+            
 
             h1{
                 margin-top: 20px;

@@ -61,16 +61,20 @@
             else {
                 //array qui retourn le resultat envoyé par $_POST
                 $data = [
-                    'full_name' => $_POST['full_name'],
-                    'cdn' => $_POST['cdn'],
-                    'adress' => $_POST['adress'],
-                    'blood_group' => $_POST['blood_group'],
-                    'phone' => $_POST['phone'],
-                    'age' => $_POST['age']
+                     'full_name' => $_POST['full_name'],
+                     'cdn' => $_POST['cdn'],
+                     'adress' => $_POST['adress'],
+                     'blood_group' => $_POST['blood_group'],
+                     'phone' => $_POST['phone'],
+                     'age' => $_POST['age']
                ];
+
+               
+              
                 //consomation du data
                 $this->callModel->addDonor($data);
                 header('location: ' . URLROOT . '/' . 'UserController/donorsliste');
+                echo("added succefully ! ");
             }
           
         }
