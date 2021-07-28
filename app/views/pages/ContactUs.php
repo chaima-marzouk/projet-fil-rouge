@@ -39,20 +39,24 @@
                 <i class="icon ion-md-close"></i>
             </div>
             <li class="nav-items">
-                <a href="#" class="nav-link">Home</a>
+                <a href="<?php echo URLROOT;?>/UserController/index" class="nav-link" class="nav-link">Home</a>
             </li>
             <li class="nav-items">
-                <a href="#" class="nav-link">About</a>
+                <a href="<?php echo URLROOT;?>/UserController/admin_signin" class="nav-link" class="nav-link">About</a>
             </li>
             <li class="nav-items">
-                <a href="#" class="nav-link">Donate</a>
+                <a href="<?php echo URLROOT;?>/UserController/donorsliste" class="nav-link" class="nav-link">Donate</a>
             </li>
             <li class="nav-items">
-                <a href="#" class="nav-link">Post</a>
+                <a href="<?php echo URLROOT;?>/UserController/post" class="nav-link"class="nav-link">Post</a>
             </li>
             <li class="nav-items">
                 <a href="<?php echo URLROOT;?>/UserController/admin_signin" class="nav-link">login</a>
             </li>
+            <li class="nav-items">
+                <a href="<?php echo URLROOT;?>/UserController/contactUs" class="nav-link">Contact us</a>
+            </li>
+            
         </ul>
     </header>
 

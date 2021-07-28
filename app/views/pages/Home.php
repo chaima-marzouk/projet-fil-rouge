@@ -49,7 +49,7 @@
                 <a href="<?php echo URLROOT;?>/UserController/donorsliste" class="nav-link" class="nav-link">Donate</a>
             </li>
             <li class="nav-items">
-                <a href="<?php echo URLROOT;?>/UserController/admin_signin" class="nav-link"class="nav-link">Post</a>
+                <a href="<?php echo URLROOT;?>/UserController/post" class="nav-link"class="nav-link">Post</a>
             </li>
             <li class="nav-items">
                 <a href="<?php echo URLROOT;?>/UserController/admin_signin" class="nav-link">login</a>
@@ -218,7 +218,17 @@
             z-index: -1;
         }
 
-        .tests::before{
+        .tests{
+            width: 100%;
+            height: 80vh;
+            margin-top: 45px;
+            background-size: cover;
+            position: relative;
+            background:url(<?=URLROOT?>/img/donlist.png)  center no-repeat fixed 
+            
+            }
+
+            .tests::before{
                 content:"";
                 margin-top: -2px;
                 position: absolute;

@@ -48,6 +48,10 @@
 
         }
 
+        public function post(){
+            $this->view('pages/Post');
+        }
+
 
         public function insert()
         {

@@ -48,7 +48,7 @@
                 <a href="<?php echo URLROOT;?>/UserController/donorsliste" class="nav-link" class="nav-link">Donate</a>
             </li>
             <li class="nav-items">
-                <a href="<?php echo URLROOT;?>/UserController/admin_signin" class="nav-link"class="nav-link">Post</a>
+                <a href="<?php echo URLROOT;?>/UserController/post" class="nav-link"class="nav-link">Post</a>
             </li>
             <li class="nav-items">
                 <a href="<?php echo URLROOT;?>/UserController/admin_signin" class="nav-link">login</a>
