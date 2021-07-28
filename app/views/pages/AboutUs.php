@@ -39,20 +39,24 @@
                 <i class="icon ion-md-close"></i>
             </div>
             <li class="nav-items">
-                <a href="#" class="nav-link">Home</a>
+                <a href="<?php echo URLROOT;?>/UserController/index" class="nav-link" class="nav-link">Home</a>
             </li>
             <li class="nav-items">
-                <a href="#" class="nav-link">About</a>
+                <a href="<?php echo URLROOT;?>/UserController/about" class="nav-link" class="nav-link">About</a>
             </li>
             <li class="nav-items">
-                <a href="#" class="nav-link">Donate</a>
+                <a href="<?php echo URLROOT;?>/UserController/donorsliste" class="nav-link" class="nav-link">Donate</a>
             </li>
             <li class="nav-items">
-                <a href="#" class="nav-link">Post</a>
+                <a href="<?php echo URLROOT;?>/UserController/post" class="nav-link"class="nav-link">Post</a>
             </li>
             <li class="nav-items">
                 <a href="<?php echo URLROOT;?>/UserController/admin_signin" class="nav-link">login</a>
             </li>
+            <li class="nav-items">
+                <a href="<?php echo URLROOT;?>/UserController/contactUs" class="nav-link">Contact us</a>
+            </li>
+            
         </ul>
     </header>
 
@@ -69,6 +73,12 @@
                     <a href="" class="btnn">Donate now</a>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="blog_post">
+            
         </div>
     </section>
 
@@ -91,6 +101,28 @@
         </div>
     </section>
 </main>
+
+
+
+
+
+
+<script type="text/javascript" >
+                // Function expression to select elements.
+            const selectElement = (s) => document.querySelector(s);
+
+
+                //Open the menu on click
+            selectElement('.open').addEventListener('click', () => {
+            selectElement('.nav-list').classList.add('active');
+            });
+
+
+                //Close the menu on click
+            selectElement('.close').addEventListener('click', () => {
+            selectElement('.nav-list').classList.remove('active');
+            });
+    </script>
 
 
 

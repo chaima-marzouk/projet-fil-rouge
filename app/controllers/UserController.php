@@ -51,6 +51,9 @@
         public function post(){
             $this->view('pages/Post');
         }
+        public function about(){
+            $this->view('pages/AboutUs');
+        }
 
 
         public function insert()
