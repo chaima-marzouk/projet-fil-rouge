@@ -76,11 +76,7 @@
         </div>
     </section>
 
-    <section>
-        <div class="blog_post">
-            
-        </div>
-    </section>
+  
 
     <section class="experience-outdoors">
          <!-- <div class="container "> -->

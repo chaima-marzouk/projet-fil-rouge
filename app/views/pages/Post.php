@@ -12,7 +12,7 @@
      <link href="https://fonts.googleapis.com/css?family=Aldrich&display=swap" rel="stylesheet">
      <!-- stylesheet -->
      <link rel="stylesheet" type="text/css" href="<?php echo URLROOT; ?>/css/styleHome.css">
-     <link rel="stylesheet" type="text/css" href="<?php echo URLROOT; ?>/css/style.scss">
+     <link rel="stylesheet" type="text/css" href="<?php echo URLROOT; ?>/css/stylePost.css">
      <!-- Bootstrap -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
@@ -86,7 +86,26 @@
         <!-- </div> -->
     </section>
 
-   
+    <section>
+        <div class="blog_post">
+            <div class="blog-post_img">
+                <img src="<?php echo URLROOT;?>/img/post.jpg " alt="post image">
+            </div>
+            <div class="blog-post_info">
+                <div class="blog-post_date">
+                    <span>B-</span>
+                    <span>Mercredi 28 juillet 2021</span>
+                    <span>A Agadir/Ait melloul</span>
+                </div>
+                <h1 class="blog-post_title">Need help</h1>
+                <p class="blog-post_details">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate a quod atque numquam neque voluptates consequatur nulla, eos, sed esse quibusdam, suscipit ratione? Dolore nulla facere iusto. Pariatur, placeat quidem!
+                </p>
+                <a href="" class="blog-post_cta">Read more</a>
+            </div>
+            
+        </div>
+    </section>
 
     <section class="tests">
         <div class="container2">
