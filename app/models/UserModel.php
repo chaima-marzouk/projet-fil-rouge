@@ -54,4 +54,22 @@ class UserModel {
         }
 
     }
+
+     // Find user by email
+     public function findUserByEmail($email)
+     {
+         $this->database->query('SELECT * FROM bloger WHERE email = :email');
+         // Bind value
+         $this->database->bind(':email', $email);
+         
+       
+         $row = $this->database->single();
+ 
+         // Check row
+         if ($this->database->rowCount() > 0) {
+             return true;
+         } else {
+             return false;
+         }
+     }
 }
