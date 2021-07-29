@@ -4,7 +4,7 @@ img{
 
 .post-section{
     width: 100%;
-    height: 100vh;
+    height: 63vh;
     display: flex;
     align-items: center;
     background-color: #eee;
@@ -106,23 +106,6 @@ img{
     .blog_post{
         max-width: 70rem;
     }
-
-    /* .nav-list {
-        width: 22rem;
-        height: 18vh;
-        margin-right: 387px;
-        background-color: transparent;
-        color: #fafafa;
-        position: fixed;
-        top: 0;
-        right: -26rem;
-        display: flex;
-        /* flex-direction: column; */
-        /* align-items: center;
-        justify-content: center;
-        z-index: 1500;
-        transition: all 650ms ease-in-out;
-    } */ 
     
 }
 
