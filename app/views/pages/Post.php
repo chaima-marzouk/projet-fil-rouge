@@ -86,10 +86,12 @@
         <!-- </div> -->
     </section>
 
-    <section>
+<section class="Achawahada">
+    <h1>Posts</h1>
+    <section class="post-section">
         <div class="blog_post">
             <div class="blog-post_img">
-                <img src="<?php echo URLROOT;?>/img/post.jpg " alt="post image">
+                <img src="<?php echo URLROOT;?>/img/no.png " alt="post image">
             </div>
             <div class="blog-post_info">
                 <div class="blog-post_date">
@@ -101,11 +103,39 @@
                 <p class="blog-post_details">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate a quod atque numquam neque voluptates consequatur nulla, eos, sed esse quibusdam, suscipit ratione? Dolore nulla facere iusto. Pariatur, placeat quidem!
                 </p>
-                <a href="" class="blog-post_cta">Read more</a>
+                <a href="" class="blog-post_cta">Donate</a>
             </div>
             
         </div>
+
+        <!-- post#2 -->
+        
     </section>
+ 
+    <section class="post-section">
+        <div class="blog_post">
+            <div class="blog-post_img">
+                <img src="<?php echo URLROOT;?>/img/no.png " alt="post image">
+            </div>
+            <div class="blog-post_info">
+                <div class="blog-post_date">
+                    <span>B-</span>
+                    <span>Mercredi 28 juillet 2021</span>
+                    <span>A Agadir/Ait melloul</span>
+                </div>
+                <h1 class="blog-post_title">Need help</h1>
+                <p class="blog-post_details">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate a quod atque numquam neque voluptates consequatur nulla, eos, sed esse quibusdam, suscipit ratione? Dolore nulla facere iusto. Pariatur, placeat quidem!
+                </p>
+                <a href="" class="blog-post_cta">Donate</a>
+            </div>
+            
+        </div>
+
+        <!-- post#2 -->
+        
+    </section>
+ </section>
 
     <section class="tests">
         <div class="container2">
@@ -195,6 +225,17 @@
 
             h1{
                 margin-top: 20px;
+            }
+
+            .blog-post{
+                width: 100%;
+                max-width: 98rem;
+                padding: 5rem;
+                background-color: #fff;
+                box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 2);
+                display: flex;
+                align-items: center;
+                border-radius: .8rem;
             }
 
         
