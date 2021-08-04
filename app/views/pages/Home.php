@@ -61,64 +61,37 @@
         </ul>
     </header>
 
-    <main>
-    <section class="hero">
-        <div class="container">
-            <div class="main-message">
-                <h3>#Give blood</h3>
-                <h1>DONATE BLOOD | SAVE A LIFE</h1>
-                <p>
-                Sometimes we tend to forget how easy can be to help another human been but this page manages to remind us. By highlighting the simplicity of the process, the slogan has also the merit to comfort and convince people that are afraid of donating blood to give it a try
-                </p>
-                <div class="cta">
-                    <a href="" class="btnn">Donate now</a>
+            <main>
+            <section class="hero">
+                <div class="container">
+                    <div class="main-message">
+                        <h3>#Give blood</h3>
+                        <h1>DONATE BLOOD | SAVE A LIFE</h1>
+                        <p>
+                        Sometimes we tend to forget how easy can be to help another human been but this page manages to remind us. By highlighting the simplicity of the process, the slogan has also the merit to comfort and convince people that are afraid of donating blood to give it a try
+                        </p>
+                        <div class="cta">
+                            <a href="" class="btnn">Donate now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+
+            <div class="main">
+        <ul class="cards">
+            <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="https://picsum.photos/500/300/?image=10"></div>
+                <div class="card_content">
+                <h2 class="card_title">Card Grid Layout</h2>
+                <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                <button class="btn card_btn">Read More</button>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="experience-outdoors">
-         <!-- <div class="container "> -->
-             
-
-            <div class="activities-gride">
-                
-                <!-- grid item n 1 -->
-                <div class="activities-grid-item star-gazing">
-                <h1 class="titre-cards">You must know</h1>
-                <div class="card text-center" style="width: 18rem; margin-left: 90px; margin-top: 18px;">
-                <img src="<?=URLROOT?>/img/ask1.png" class="card-img-top" style="width: 100%; " alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <button type="button" class="btn btn-outline-info">Get your answer</button>
-                    </div>
-                </div>
-
-                     <!-- grid item n 2 -->
-                <div class="activities-grid-item star-gazing">
-                <div class="card text-center" style="width: 18rem; margin-left: 90px; margin-top: 18px;">
-                <img src="<?=URLROOT?>/img/ask2.jpg" class="card-img-top" style="width: 100%; " alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <button type="button" class="btn btn-outline-info">Get your answer</button>
-                    </div>
-                </div>
-                     <!-- grid item n 3 -->
-                <div class="activities-grid-item star-gazing">
-                <div class="card text-center" style="width: 18rem; margin-left: 90px; margin-top: 18px;">
-                <img src="<?=URLROOT?>/img/ask3.jpg" class="card-img-top" style="width: 100%; " alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <button type="button" class="btn btn-outline-info">Get your answer</button>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            </li>
+        </main>
 
     <section class="icon-container">
     <h1 class="titre-icons">Our services</h1>
@@ -155,11 +128,12 @@
                
             </div>
         </div>
+        
 
     </section>
 
 
-    </main>
+    
 
 
 
