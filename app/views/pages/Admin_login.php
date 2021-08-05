@@ -15,23 +15,23 @@
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
-          <form action="#" class="sign-in-form">
+          <form action="<?php echo URLROOT ?>/UserController/login" method="post" class="sign-in-form">
             <h2 class="title">Sign in</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
+              <input type="text" name="email" placeholder="email" />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input type="password" name="password" placeholder="Password" />
             </div>
             <input type="submit" value="Login" class="btn solid" />
           </form>
-          <form action="#" class="sign-up-form">
+          <form action="<?php echo URLROOT ?>/UserController/signup" method="post" class="sign-up-form">
             <h2 class="title">Sign up</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" name="name" placeholder="Username" />
+              <input type="text" name="full_name" placeholder="full name" />
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
@@ -47,12 +47,7 @@
             </div>
             <div class="input-field">
             <i class="fas fa-tint"></i>
-              <input type="text" name="bloodG" placeholder="Blood G"/>
-              <select id="Blood G." name="blood_group">
-                <option value="AB">AB</option>
-                <option value="B+">B+</option>
-                <option value="B-">B-</option>
-                </select>
+              <input type="text" name="g_sang" placeholder="Blood G"/>
             </div>
             <div class="input-field">
               <i class="fas fa-phone"></i>
@@ -60,9 +55,9 @@
             </div>
             <div class="input-field">
              <i class="fas fa-address-card"></i>
-              <input type="text" name="cdn" placeholder="cdn"/>
+              <input type="text" name="cin" placeholder="cin"/>
             </div>
-            <input type="submit" class="btn" value="Sign up"/>
+            <input type="submit"  name="signup" class="btn" value="Sign up"/>
           </form>
         </div>
       </div>
@@ -114,3 +109,4 @@
 </html>
 
    
+id_user	full_name	email	password	g_sang	phone	ville	cin	

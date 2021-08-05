@@ -85,6 +85,30 @@
           
         }
 
+        public function signup(){
+            if(!isset($_POST['signup'])){
+                //load the view insert
+                $this->view('pages/admin_login');
+            }
+
+            else{
+                $data = [
+                    'full_name' => $_POST['full_name'],
+                    'email' => $_POST['email'],
+                    'password' => $_POST['password'],
+                    'g_sang' => $_POST['g_sang'],
+                    'phone' => $_POST['phone'],
+                    'ville' => $_POST['ville'],
+                    'cin' => $_POST['cin']
+              ];
+
+              //consomation du data
+              $this->callModel->register($data);
+              header('location: ' . URLROOT . '/' . 'UserController/admin_signin');
+              echo("added succefully ! ");
+            }
+        }
+
         public function login()
         {
             // Check for POST
