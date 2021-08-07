@@ -77,24 +77,40 @@
                 </div>
             </section>
 
-            <section>
 
-            <div class="main">
-        <ul class="cards">
-            <li class="cards_item">
-            <div class="card">
-                <div class="card_image"><img src="https://picsum.photos/500/300/?image=10"></div>
-                <div class="card_content">
-                <h2 class="card_title">Card Grid Layout</h2>
-                <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-                <button class="btn card_btn">Read More</button>
-                </div>
-            </div>
-            </li>
-        </main>
+            <section class="card_section">
 
-    <section class="icon-container">
-    <h1 class="titre-icons">Our services</h1>
+                <div class="card-deck">
+                    <div class="card ">
+                        <img class="card-img-top" src="<?php echo URLROOT?>/img/ask1.png"  alt="Card image cap">
+                        <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="<?php echo URLROOT?>/img/ask222.jpg"  alt="Card image cap">
+                        <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="<?php echo URLROOT?>/img/ask3.jpg" alt="Card image cap">
+                        <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                    </div>
+</section>
+
+
+    <section>
+    <!-- <h1 class="titre-icons">Our services</h1> -->
         <div class="test-donor" style="display: flex;">
              <div class="tooltip1">
                 <a href="<?=URLROOT?>/UserController/donorsliste"><img src="<?=URLROOT?>/img/donor.png" alt=""></a>
@@ -107,7 +123,7 @@
     </section>
 
     <section class="tests">
-        <div class="container2">
+        <!-- <div class="container2">
             <div class="test">
                 <div class="test-text-box">
                 <div class="social-media">
@@ -127,10 +143,11 @@
                 </div>
                
             </div>
-        </div>
+        </div> -->
         
 
     </section>
+    
 
 
     
@@ -220,12 +237,13 @@
                 margin-top: 20px;
             }
             .social-media {
+                /* max-width: ; */
                 display: flex;
                 margin: 0 51%;
             }
-            /* .social-icon{
+            .social-icon{
                 margin: 20%;
-            } */
+            }
     </style>
 
 </body>

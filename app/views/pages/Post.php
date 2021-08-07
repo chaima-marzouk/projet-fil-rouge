@@ -236,6 +236,15 @@
                 display: flex;
                 align-items: center;
                 border-radius: .8rem;
+            } .blog-post{
+                width: 100%;
+                max-width: 98rem;
+                padding: 5rem;
+                background-color: #fff;
+                box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 2);
+                display: flex;
+                align-items: center;
+                border-radius: .8rem;
             }
 
         

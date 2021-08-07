@@ -44,8 +44,11 @@
             $this->view('pages/donors-liste',$data);
         }
 
-        public function email(){
-
+        public function user_profil(){
+            $this->view('pages/user_profil');
+        }
+        public function user_post(){
+            $this->view('pages/user_profil_post');
         }
 
         public function post(){
@@ -54,6 +57,13 @@
         public function about(){
             $this->view('pages/AboutUs');
         }
+        public function admin(){
+            $this->view('pages/admin');
+        }
+        public function profil(){
+            $this->view('pages/profil');
+        }
+        
 
 
         public function insert()
@@ -157,7 +167,7 @@
                         
                         $this->callModel->getUser();
                         // $this->view('pages/BlogsPage', $data);
-                        header('location:'.URLROOT.'/' . 'UserController/crud'); 
+                        header('location:'.URLROOT.'/' . 'UserController/user_profil'); 
                     } else {
                         $data['password_err'] = 'Password incorrect';
                         $this->view('pages/Signin', $data);
@@ -177,7 +187,7 @@
                 ];
     
                 // Load view
-                $this->view('pages/BlogsPage', $data);
+                $this->view('pages/user_profil', $data);
                 // header('location:'.URLROOT.'/' . 'UserController/crud'); 
             }
         }

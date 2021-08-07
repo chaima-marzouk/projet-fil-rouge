@@ -202,7 +202,8 @@ nav{
 .tittle-hedding h1{
     font-family: 'Aldrich', sans-serif;
     font-size: 2rem;
-    margin: 5rem 0 1rem;
+    /* 
+     */
 }
 
 
@@ -259,7 +260,7 @@ nav{
 } */
 
 .icon-container {
-    margin: 30px 51px;
+    margin: 30px 447px;
     padding: 23px;
 }
 
@@ -543,6 +544,10 @@ nav{
         width: 56%;
         max-width: 58%;
         height: auto;
+    }
+
+    .card_section{
+        margin: 100px;
     }
   
   

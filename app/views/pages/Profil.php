@@ -51,7 +51,10 @@
 </div>
 
 
-<form style="margin: 0px 116px;margin-top: 115px;">
+<form style="
+    width: 58%;
+    margin: auto;
+    margin-top: 115px;">
  <h3>Account</h3>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email address</label>

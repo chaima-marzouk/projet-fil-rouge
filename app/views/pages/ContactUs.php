@@ -87,7 +87,9 @@
     </section>
 
     <section class="position">
-        <h1 style="margin-left: 44%; margin-bottom:20px;">Contact Us !!</h1>
+        <h1 style="
+        
+        margin-bottom:20px;">Contact Us !!</h1>
          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6795.880091047688!2d-8.067289571502688!3d31.608102561049407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sma!4v1627252063324!5m2!1sfr!2sma" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </section>
 
