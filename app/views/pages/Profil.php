@@ -1,3 +1,23 @@
+
+<?php
+
+
+if (session_status() == PHP_SESSION_NONE) {
+
+    session_start();
+}
+
+    
+    $email = $_SESSION['user_email'];
+    $name_session = $_SESSION['utilisateur'];
+    $city = $_SESSION['city'];
+    $phone =  $_SESSION['phone'];
+    $id = $_SESSION['ID'];
+    $blood = $_SESSION['blood'];
+    
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,48 +55,50 @@
         </div>
       </nav>
 
-</div>
-<div class="sidebar">
-    <header><img src="<?php  echo URLROOT?>/img/no.png" class="card-img-top" style="width: 60%; margin:6px" alt="..."></header>
-    
-</div>
+      </div>
+      <div class="sidebar">
+          <header><img src="<?php  echo URLROOT?>/img/no.png" class="card-img-top" style="width: 60%; margin:6px ; margin-top: 18px;" alt="..."></header>
+          
+      </div>
 
 
-<div class="container"> 
-  <h1>Chaima Marzouk</h1>
-    <div style="display: flex; ">
-      <a href="#">marzouk.chaima.892@gmail</a>
-      <p>-Admin</p>
-    </div>
-</div>
+        <div class="container" style="margin-left: 592px;
+         margin-top: 40px;"> 
+          <h1 style="text-decoration: underline overline #c9e6f4;"><?php echo $name_session; ?></h1>
+            <div style="display: flex; ">
+              <a href="#"><?php echo $email; ?></a>
+              <p>-Admin</p>
+            </div>
+        </div>
 
 
-<form style="
-    width: 58%;
-    margin: auto;
-    margin-top: 115px;">
- <h3>Account</h3>
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
-  </div>
-  <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+        <div class="card text-center"  style="
+            width: 58%;
+            margin: auto;
+            margin-top: 79px;" 
+          >
+          <div class="card-header">
+            Featured
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Information card</h5>
+            <p class="card-text"><span style="color: blue;"> Email address :</span> <?php echo $email; ?></p>
+            <p class="card-text"><span style="color: blue;"> City :</span> <?php echo $city; ?></p>
+            <p class="card-text"><span style="color: blue;"> Blood G :</span> <?php echo $blood; ?></p>
+            <p class="card-text"><span style="color: blue;"> Phone number :</span> <?php echo $phone; ?></p>
+            <p class="card-text"><span style="color: blue;"> Identity card :</span> <?php echo $id; ?></p>
+            <a href="#" class="btn btn-primary">My Posts</a>
+          </div>
+          <div class="card-footer text-muted"> 2 days ago</div>
+        </div>
 
 
 
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-</body>
-</html>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  </body>
+  </html>

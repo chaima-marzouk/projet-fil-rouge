@@ -61,6 +61,7 @@
             $this->view('pages/admin');
         }
         public function profil(){
+
             $this->view('pages/profil');
         }
         
@@ -127,7 +128,6 @@
                 // Process form
                 // Sanitize POST data
                 $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
-                // die("oups");
                 // Init data
                 $data = [
                     'email' => trim($_POST['email']),
@@ -162,11 +162,22 @@
                     // Validated
                     // Check and set logged in user
                     $loggedInUser = $this->callModel->login($data['email'], $data['password']);
+                    
     
                     if ($loggedInUser) {
                         
-                        $this->callModel->getUser();
-                        // $this->view('pages/BlogsPage', $data);
+                        $test = $this->callModel->getUser();
+                        
+                         $_SESSION['utilisateur'] = $loggedInUser->{'full_name'};
+                         $_SESSION['user_email'] = $loggedInUser->{'email'};
+                         $_SESSION['city'] = $loggedInUser->{'ville'};
+                         $_SESSION['phone'] = $loggedInUser->{'phone'};
+                         $_SESSION['ID'] = $loggedInUser->{'cin'};
+                         $_SESSION['blood'] = $loggedInUser->{'g_sang'};
+
+                         
+                       
+                        
                         header('location:'.URLROOT.'/' . 'UserController/user_profil'); 
                     } else {
                         $data['password_err'] = 'Password incorrect';
@@ -187,8 +198,9 @@
                 ];
     
                 // Load view
+                
                 $this->view('pages/user_profil', $data);
-                // header('location:'.URLROOT.'/' . 'UserController/crud'); 
+                 
             }
         }
     }

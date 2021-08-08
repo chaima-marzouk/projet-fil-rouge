@@ -1,3 +1,24 @@
+<?php
+
+
+
+if (session_status() == PHP_SESSION_NONE) {
+
+session_start();
+}
+
+$name_session = $_SESSION['utilisateur'];
+
+$email_session = $_SESSION['user_email'];
+
+$password = $_SESSION['user_password'];
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,8 +39,8 @@
     <header><img src="<?php echo URLROOT ; ?>/img/logob.png" alt="logo"></header>
      <ul>
      <button  type="button" class="btn text-white m-2" style="background-color: #0D4E6D;" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Add new post</button>
-        <li><a href="">Pages</a></li>
-        <li><a href="<?php echo URLROOT ;?>/UserController/admin">Profil</a></li>   
+        <li><a href=""><?php echo $name_session; ?></a></li>
+        <li><a href="<?php echo URLROOT ;?>/UserController/profil">Profil</a></li>   
     </ul> 
 </div> 
 
@@ -68,6 +89,7 @@
               <li class="nav-item">
                 <a class="nav-link active" style="margin-left:91px;" aria-current="page" href="<?php echo URLROOT ; ?>/UserController/index">Home</a>
               </li>
+              
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Dropdown
@@ -78,7 +100,14 @@
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
+                <li class="nav-item">
+             <a class="nav-link active " style="" aria-current="page" href="<?php echo URLROOT ;?>/UserController/profil"> <p style="margin-left: 188px;">Welcome
+             <span style="color:blue"><?php echo $name_session; ?> </span></p></a>
               </li>
+              </li>
+
+
+              
             </ul>
               
               
@@ -87,8 +116,22 @@
         </div>
       </nav>
 
-
-
+    
+      <form style="
+    width: 58%;
+    margin: auto;
+    margin-top: 115px;">
+ <h3>Account</h3>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" value="<?php echo $email_session; ?>" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="text" class="form-control" value="<?php echo $password; ?>" id="exampleInputPassword1">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
 
 
 

@@ -61,6 +61,12 @@ ul li:hover{
     margin-left: 387px;
 }
 
+.card{
+           width: 58%;
+            margin: auto;
+            margin-top: 79px;
+}
+
 /* h3{
     margin: 20px;
 } */

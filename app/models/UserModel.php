@@ -120,7 +120,7 @@ class UserModel {
         $this->database->query("SELECT * FROM `reg_user` ");
         //execution de la query / fetch all 
         $result = $this->database->resultSet();
-        return $result;
+        return ($result);
       
     }
 }
