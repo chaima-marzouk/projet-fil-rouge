@@ -88,7 +88,31 @@
 
 <section class="Achawahada">
     <h1>Posts</h1>
+    <?php foreach($data['posts'] as $post):?>
     <section class="post-section">
+        <div class="blog_post">
+            <div class="blog-post_img">
+                <img src="<?php echo URLROOT;?>/img/no.png " alt="post image">
+            </div>
+            <div class="blog-post_info">
+                <div class="blog-post_date">
+                    <!-- <span><?php echo $post->fullname ?></span> -->
+                    <span><?php echo $post->email ?></span>
+                    <span><?php echo $post->adress ?></span>
+                    <span>Creat at : <?php echo $post->created_at ?></span>
+                    <span>Phone number : <?php echo $post->phone ?></span>
+                </div>
+                <h1 class="blog-post_title"><?php echo $post->fullname ?></h1>
+                <p class="blog-post_details">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate a quod atque numquam neque voluptates consequatur nulla, eos, sed esse quibusdam, suscipit ratione? Dolore nulla facere iusto. Pariatur, placeat quidem!
+                </p>
+                <a href="" class="blog-post_cta">Donate</a>
+            </div>  
+        </div>  
+    </section>
+    <?php endforeach ; ?>
+   <!-- post#2 -->
+    <!-- <section class="post-section">
         <div class="blog_post">
             <div class="blog-post_img">
                 <img src="<?php echo URLROOT;?>/img/no.png " alt="post image">
@@ -108,33 +132,9 @@
             
         </div>
 
-        <!-- post#2 -->
+         post#2 -->
         
-    </section>
- 
-    <section class="post-section">
-        <div class="blog_post">
-            <div class="blog-post_img">
-                <img src="<?php echo URLROOT;?>/img/no.png " alt="post image">
-            </div>
-            <div class="blog-post_info">
-                <div class="blog-post_date">
-                    <span>B-</span>
-                    <span>Mercredi 28 juillet 2021</span>
-                    <span>A Agadir/Ait melloul</span>
-                </div>
-                <h1 class="blog-post_title">Need help</h1>
-                <p class="blog-post_details">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate a quod atque numquam neque voluptates consequatur nulla, eos, sed esse quibusdam, suscipit ratione? Dolore nulla facere iusto. Pariatur, placeat quidem!
-                </p>
-                <a href="" class="blog-post_cta">Donate</a>
-            </div>
-            
-        </div>
-
-        <!-- post#2 -->
-        
-    </section>
+    </section> -->
  </section>
 
     <section class="tests">

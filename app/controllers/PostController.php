@@ -8,6 +8,9 @@ class PostController extends Controller{
     public function index(){
 
         $post = $this->postModel->findAllPosts();
-        $this->view('pages/Post');
+        $data = [
+        'posts' => $post
+       ];
+        $this->view('pages/Post', $data);
     }
 }
