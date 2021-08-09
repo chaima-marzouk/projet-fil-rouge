@@ -9,6 +9,10 @@ class PostModel{
     }
 
     public function findAllPosts(){
-        $this->db->
+        $this->db->query('SELECT * FROM posts ORDER BY created_at ASC' );
+
+        $result = $this->db->resultSet();
+
+        return $result;
     }
 }
