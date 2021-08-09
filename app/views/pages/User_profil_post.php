@@ -59,7 +59,7 @@
 
 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light" style=" margin-left: 249px; margin-top: 20px; margin-bottom: 30px;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style=" margin-left: 249px; margin-top: 20px; margin-bottom: 30px;">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -84,30 +84,28 @@
             </form>
           </div>
         </div>
-      </nav>
+    </nav>
  
- <section class="post-section">
-     <div class="blog_post">
-         <div class="blog-post_img">
-             <img src="<?php echo URLROOT;?>/img/no.png " alt="post image">
-         </div>
-         <div class="blog-post_info">
-             <div class="blog-post_date">
-                 <span>B-</span>
-                 <span>Mercredi 28 juillet 2021</span>
-                 <span>A Agadir/Ait melloul</span>
-             </div>
-             <h1 class="blog-post_title">Need help</h1>
-             <p class="blog-post_details">
-                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate a quod atque numquam neque voluptates consequatur nulla, eos, sed esse quibusdam, suscipit ratione? Dolore nulla facere iusto. Pariatur, placeat quidem!
-             </p>
-             <a href="" class="">Edit</a>
-             <a href="" class="">Delete</a>
-         </div>
-         
-     </div>
-
- </section>
+    <section class="post-section">
+        <div class="blog_post">
+            <div class="blog-post_img">
+                <img src="<?php echo URLROOT;?>/img/no.png " alt="post image">
+            </div>
+            <div class="blog-post_info">
+                <div class="blog-post_date">
+                    <span>B-</span>
+                    <span>Mercredi 28 juillet 2021</span>
+                    <span>A Agadir/Ait melloul</span>
+                </div>
+                <h1 class="blog-post_title">Need help</h1>
+                <p class="blog-post_details">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate a quod atque numquam neque voluptates consequatur nulla, eos, sed esse quibusdam, suscipit ratione? Dolore nulla facere iusto. Pariatur, placeat quidem!
+                </p>
+                <a href="" class="">Edit</a>
+                <a href="" class="">Delete</a>
+            </div>   
+        </div>
+    </section>
 
      <!-- post#2 -->
 

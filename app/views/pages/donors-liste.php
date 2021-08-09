@@ -95,7 +95,7 @@
             <table>
                 <tr>
                 <th scope="col">Full name</th>
-                <th scope="col">CND</th>
+                <!-- <th scope="col">CND</th> -->
                 <th scope="col">Adress</th>
                 <th scope="col">Blood G.</th>
                 <th scope="col">Phone nember</th>
@@ -104,7 +104,7 @@
                     <?php foreach ($data["donors"] as $row) :?>
                 <tr>
                 <td><?php echo $row->full_name ;?></td>
-                        <td><?php echo $row->cdn ;?></td>
+                        <!-- <td><?php echo $row->cdn ;?></td> -->
                         <td><?php echo $row->adress ;?></td>
                         <td><?php echo $row->blood_group ;?></td>
                         <td><?php echo $row->phone ;?></td>

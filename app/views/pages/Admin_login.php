@@ -15,15 +15,18 @@
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
-          <form action="<?php echo URLROOT ?>/UserController/login" method="post" class="sign-in-form">
+          <form  action="<?php echo URLROOT ?>/UserController/login" method="post" class="sign-in-form">
             <h2 class="title">Sign in</h2>
+            <?php if (isset($data['email_err'])) {echo $data['email_err'];} ?>
             <div class="input-field">
               <i class="fas fa-user"></i>
               <input type="text" name="email" placeholder="email" />
+              <!--  -->
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
               <input type="password" name="password" placeholder="Password" />
+              <!--  -->
             </div>
             <input type="submit" value="Login" class="btn solid" />
           </form>

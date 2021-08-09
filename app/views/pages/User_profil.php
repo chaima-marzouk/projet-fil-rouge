@@ -13,6 +13,9 @@ $email_session = $_SESSION['user_email'];
 
 $password = $_SESSION['user_password'];
 
+$id = $_SESSION['id'] ;
+
+
 ?>
 
 
@@ -76,6 +79,7 @@ $password = $_SESSION['user_password'];
                         </div>
                       </div>
                     </div>
+                    </form>
 
 
 
@@ -92,13 +96,15 @@ $password = $_SESSION['user_password'];
               
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
+                  
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="<?php echo URLROOT;?>/UserController/user_post">Posts</a></li>
                   <li><a class="dropdown-item" href="<?php echo URLROOT ; ?>/UserController/rendezvous">DONATE</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <!-- <form action="post" action=""> -->
+                  <li><a class="dropdown-item " href="<?php echo URLROOT; ?>/UserController/logout"> <button class="bg-danger text-white" type="submit" name="logout">Logout</button> </a></li>
+                  <!-- </form> -->
                 </ul>
                 <li class="nav-item">
              <a class="nav-link active " style="" aria-current="page" href="<?php echo URLROOT ;?>/UserController/profil"> <p style="margin-left: 188px;">Welcome
@@ -106,21 +112,30 @@ $password = $_SESSION['user_password'];
               </li>
               </li>
 
-
+              <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" style="margin-left: 211px;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  More
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="<?php echo URLROOT;?>/UserController/user_post">Posts</a></li>
+                  <li><a class="dropdown-item" href="<?php echo URLROOT ; ?>/UserController/rendezvous">DONATE</a></li>
+                  <li><a class="dropdown-item" href="<?php echo URLROOT ; ?>/UserController/rendezvous">Delete account</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><input type="submit" value="Logout" name="logout" class="dropdown-item bg-danger text-white" href="<?php echo URLROOT; ?>/UserCotroller/logout"></li>
+                </ul>
+                </a> -->
+               
+               
               
-            </ul>
+            <!-- </ul> -->
               
               
-            </form>
+           
           </div>
         </div>
       </nav>
 
-    
-      <form style="
-    width: 58%;
-    margin: auto;
-    margin-top: 115px;">
+      
+      <form style="width: 58%; margin: auto;margin-top: 115px;" action="<?php echo URLROOT; ?>/UserController/update?id=<?php echo $id ?>" method="POST">
  <h3>Account</h3>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
@@ -130,7 +145,9 @@ $password = $_SESSION['user_password'];
     <label for="exampleInputPassword1" class="form-label">Password</label>
     <input type="text" class="form-control" value="<?php echo $password; ?>" id="exampleInputPassword1">
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+ 
+  <button  type="submit"  name="update" class="btn btn-primary">Edit info</button>
+  
 </form>
 
 

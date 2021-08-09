@@ -47,7 +47,7 @@ if (session_status() == PHP_SESSION_NONE) {
                   <li><a class="dropdown-item" href="<?php echo URLROOT;?>/UserController/Post">posts</a></li>
                   <li><a class="dropdown-item" href="<?php echo URLROOT ; ?>/UserController/rendezvous">Rendez-vous</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><a class="dropdown-item" href="#">logout</a></li>
                 </ul>
               </li> 
             </ul>

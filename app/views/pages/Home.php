@@ -244,6 +244,13 @@
             .social-icon{
                 margin: 20%;
             }
+
+            .test-donor {
+                width: 82%;
+                margin: auto;
+                /* margin-top: -1%; */
+                margin-left: 21%;
+            }
     </style>
 
 </body>

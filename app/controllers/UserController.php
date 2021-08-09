@@ -33,6 +33,7 @@
         }
         public function admin_signin()
         {
+          
             $this->view('pages/Admin_login');
         }
         public function donorsliste(){
@@ -45,6 +46,8 @@
         }
 
         public function user_profil(){
+         
+
             $this->view('pages/user_profil');
         }
         public function user_post(){
@@ -63,6 +66,14 @@
         public function profil(){
 
             $this->view('pages/profil');
+        }
+
+        public function logout() {
+            
+        session_destroy();
+         
+        $this->view('pages/Admin_login');
+            
         }
         
 
@@ -162,6 +173,7 @@
                     // Validated
                     // Check and set logged in user
                     $loggedInUser = $this->callModel->login($data['email'], $data['password']);
+
                     
     
                     if ($loggedInUser) {
@@ -170,10 +182,12 @@
                         
                          $_SESSION['utilisateur'] = $loggedInUser->{'full_name'};
                          $_SESSION['user_email'] = $loggedInUser->{'email'};
+                         $_SESSION['user_password'] = $loggedInUser->{'password'};
                          $_SESSION['city'] = $loggedInUser->{'ville'};
                          $_SESSION['phone'] = $loggedInUser->{'phone'};
                          $_SESSION['ID'] = $loggedInUser->{'cin'};
                          $_SESSION['blood'] = $loggedInUser->{'g_sang'};
+                         $_SESSION['id'] = $loggedInUser->{'id_user'};
 
                          
                        
@@ -203,6 +217,70 @@
                  
             }
         }
+
+        public function update($id)
+        {
+            
+            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                $params=[ 
+                    'id'=>$id,
+                    'email' =>$_POST['email'],
+                    'password' => $_POST['password']
+                    ];
+
+                    echo($id);
+                    $this->callModel->updatePost($params);
+                    header('location:'.URLROOT.'/' . 'pages/user_profil'); 
+            }else{
+                
+
+              $data = $this->callModel->getUserbyId($id);
+            //   var_dump($data);
+
+                $this->view('pages/user_profil',$data);
+            }
+           
+        }
+
+
+
+
+
+    public function email(){
+        ini_set('SMTP','imap.gmail.com');
+
+        $message_sent = false;
+        if(isset($_POST['email']) && $_POST['email'] != ''){
+
+            if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+                //submit the form
+                $username = $_POST['name'];
+                $email = $_POST['email'];
+                $subject = $_POST['subject'];
+                $message = $_POST['message'];
+
+                $to = "sonsiteweb123@gmail.com";
+                $body = "";
+
+                $body .= "From ".$username. "\r\n";
+                $body .= "Email ".$email. "\r\n";
+                $body .= "Message ".$message. "\r\n";
+
+                mail($to,$subject,$body);
+                // ini_set('SMTP','smtp.topnet.tn');
+               
+
+
+                $message_sent = true;
+            }
+        
+
+    }
+
+        
+    }
+
+
     }
 
         

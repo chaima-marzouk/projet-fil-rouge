@@ -119,16 +119,28 @@
                 </div>
             </div>
             <div class="contact-col">
+                <?php 
+                    // if($message_sent):
+                ?>
+
+                <!-- <h3>Thanks, we'll be in touch</h3> -->
+
+                <?php 
+                //    else:
+                ?>
 
             <form action="<?php echo URLROOT;?>/UserController/email" method="post">
                 <input type="text" name="name" placeholder="Enter your name please" required>
                 <input type="email" name="email" placeholder="Enter your email please" required>
                 <input type="text" name="subject" placeholder="Enter your name subject" required>
                 <textarea rows="8" name="message" placeholder="Message" required></textarea>
-                <button type="submit" class="contact-button">Send</button>
+                <button type="submit" name="send" class="contact-button">Send</button>
 
             </form>
             </div>
+            <?php 
+                //    endif;
+            ?>
         </div>
 
     </section>

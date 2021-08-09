@@ -123,4 +123,28 @@ class UserModel {
         return ($result);
       
     }
+    public function updatePost($params)
+    {
+      $this->database->query("UPDATE reg_user  SET email= :email, password= :password WHERE id_user = :id");
+      $this->database->bind(':email', $params['email']);
+      $this->database->bind(':password',$params['password']);
+      $this->database->bind(':id',$params['id']);
+
+      $params=$this->database->execute();
+      if($this->database->execute()){
+          return true;
+        } else {
+          return false;
+        }
+
+    }
+
+    public function getUserbyId($id){
+        $this->database->query("SELECT * FROM  `reg_user` WHERE id_user = :id");
+        $this->database->bind(':id',$id);
+  
+        $results = $this->database->single();
+  
+        return $results;
+      }
 }
