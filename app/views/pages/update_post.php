@@ -18,6 +18,12 @@
 
 <div class="sidebar">
     <header><img src="<?php echo URLROOT ; ?>/img/logob.png" alt="logo"></header>
+    <ul>
+        <li>
+        <button class="btn btn-outline-danger" onclick="goBack()">Go Back to Posts page </button>
+        </li>
+    </ul>
+    
 </div> 
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"aria-hidden="true">
@@ -71,6 +77,7 @@
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Dropdown
                 </a>
+
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="<?php echo URLROOT;?>/UserController/Post">posts</a></li>
                   <li><a class="dropdown-item" href="<?php echo URLROOT ; ?>/UserController/rendezvous">Rendez-vous</a></li>
@@ -115,7 +122,11 @@
 
 
 
-
+    <script>
+        function goBack() {
+        window.history.back();
+        }
+    </script>
 
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 

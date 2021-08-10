@@ -33,6 +33,14 @@
             </nav>
 
         </div>
+
+        <?php if(isset($_SESSION['user_id'])): ?>
+            <style>
+                .btnn{
+                    display: none;
+                }
+            </style>
+        <?php endif; ?>
  
         
 

@@ -98,7 +98,7 @@
                     
 
                         <div class="btn-group">
-                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button type="button" class="btn btn-outline-danger dropdown-toggle" style="float: right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             More
                         </button>
                             <div class="dropdown-menu bg_grey dropdown-menu-right" style="margin-left: 335%; ">
