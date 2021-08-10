@@ -83,6 +83,13 @@ $id = $_SESSION['user_id'];
                                 <label for="details"  class="col-form-label">Details:</label>
                                 <textarea class="form-control" name="details" id="message-text"></textarea>
                             </div>
+                            <div class="mb-3">
+                                <label for="start" class="col-form-label" >date:</label>
+
+                                <input type="date" id="start" name="created_at"
+                                 value="2018-07-22" class="form-control"
+                                 min="2018-01-01" max="2021-12-31">
+                            </div>
                             <button
                                 type="submit" value="submit" name="submit_add" style="margin-top: 20px;"
                                 class="btn btn-outline-primary btn-rounded"

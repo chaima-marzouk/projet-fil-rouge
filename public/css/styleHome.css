@@ -171,8 +171,9 @@ nav{
 }
 
 .btnn{
-    background-color: #eb648c;
+    background-color: #1954a0;
     border-radius: 2rem;
+    text-decoration: none;
     color: #fafafa;
     display: inline-block;
     margin-top: 2rem;
@@ -183,6 +184,8 @@ nav{
 
 .btnn:hover{
     background-color: #dd295f;
+    text-decoration: none;
+    color: white;
 
 }
 
@@ -498,6 +501,12 @@ nav{
       @media (min-width: 56rem) {
         .cards_item {
           width: 33.3333%;
+        }
+      }
+
+      @media (max-width: 48.75rem) {
+        .btn  {
+          display: none;
         }
       }
       

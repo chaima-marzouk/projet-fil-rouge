@@ -17,7 +17,7 @@ class PostModel{
     }
 
     public function addPost($data) {
-        $this->db->query('INSERT INTO post (user_id, fullname, email, adress, phone, details) VALUES (:user_id, :fullname, :email, :adress, :phone, :details)');
+        $this->db->query('INSERT INTO post (user_id, fullname, email, adress, phone, details, created_at) VALUES (:user_id, :fullname, :email, :adress, :phone, :details, :created_at)');
 
         $this->db->bind(':user_id', $data['user_id']);
         $this->db->bind(':fullname', $data['fullname']);
@@ -25,6 +25,7 @@ class PostModel{
         $this->db->bind(':adress', $data['adress']);
         $this->db->bind(':phone', $data['phone']);
         $this->db->bind(':details', $data['details']);
+        $this->db->bind(':created_at', $data['created_at']);
 
         if ($this->db->execute()) {
             return true;

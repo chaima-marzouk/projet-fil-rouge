@@ -43,10 +43,12 @@ class PostController extends Controller{
             'phone' => trim($_POST['phone']),
             'details' => trim($_POST['details']),
             'adress' => trim($_POST['adress']),
+            'created_at' => trim($_POST['created_at']),
         ];
 
         if ($this->postModel->addPost($data)) {
             echo "<script>alert(\"Post created succefully :)\")</script>";
+            header("Location: " . URLROOT . "/PostController/index");
         } else {
             die("Something went wrong, please try again!");
         }

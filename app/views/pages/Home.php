@@ -26,6 +26,7 @@
                 <div class="nav-barand">
                     <img src="<?php echo URLROOT; ?>/img/logob.png" alt="LOGO">
                 </div>
+             
                 <div class="menu-icons open">
                     <i class="icon ion-md-menu" style="margin-right: 30px;"></i>
                 </div>
@@ -71,7 +72,7 @@
                         Sometimes we tend to forget how easy can be to help another human been but this page manages to remind us. By highlighting the simplicity of the process, the slogan has also the merit to comfort and convince people that are afraid of donating blood to give it a try
                         </p>
                         <div class="cta">
-                            <a href="<?php echo URLROOT?>/PostController/insert" class="btnn">Donate now</a>
+                            <a href="<?php echo URLROOT?>/UserController/admin_signin" class="btnn">SIGNIN</a>
                         </div>
                     </div>
                 </div>
