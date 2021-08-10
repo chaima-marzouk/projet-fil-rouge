@@ -13,4 +13,49 @@ class PostController extends Controller{
        ];
         $this->view('pages/Post', $data);
     }
+
+    public function insert(){
+        if(!isLoggedIn()){
+            $this->view('/pages/Admin_login');
+        }
+        
+
+        $data= [
+            'fullname' => '',
+            'email' => '',
+            'phone' => '',
+            'details' => '',
+            'adress' => '',
+            'fullnameError' => '',
+            'emailError' => '',
+            'phoneError' => '',
+            'detailsError' => '',
+            'adressError' => '',
+        ];
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+
+           $data= [
+            'user_id' => $_SESSION['user_id'],
+            'fullname' => trim($_POST['fullname']),
+            'email' => trim($_POST['email']),
+            'phone' => trim($_POST['phone']),
+            'details' => trim($_POST['details']),
+            'adress' => trim($_POST['adress']),
+        ];
+
+        if ($this->postModel->addPost($data)) {
+            echo "<script>alert(\"Post created succefully :)\")</script>";
+        } else {
+            die("Something went wrong, please try again!");
+        }
+
+        }
+
+        $this->view('pages/User_profil' ,$data);
+    }
+    
+
+
 }

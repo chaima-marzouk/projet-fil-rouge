@@ -13,7 +13,7 @@ $email_session = $_SESSION['user_email'];
 
 $password = $_SESSION['user_password'];
 
-$id = $_SESSION['id'] ;
+$id = $_SESSION['user_id'];
 
 
 ?>
@@ -32,6 +32,7 @@ $id = $_SESSION['id'] ;
     <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/styleHome.css">
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     <title>User page</title>
 </head>
@@ -41,7 +42,7 @@ $id = $_SESSION['id'] ;
 <div class="sidebar">
     <header><img src="<?php echo URLROOT ; ?>/img/logob.png" alt="logo"></header>
      <ul>
-     <button  type="button" class="btn text-white m-2" style="background-color: #0D4E6D;" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Add new post</button>
+     <button  type="button" class="btn text-white bg-primary m-2"  data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Add new post</button>
         <li><a href=""><?php echo $name_session; ?></a></li>
         <li><a href="<?php echo URLROOT ;?>/UserController/profil">Profil</a></li>   
     </ul> 
@@ -55,25 +56,38 @@ $id = $_SESSION['id'] ;
                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                                  <div class="modal-body">
-                                           <!------ form add episode ------>
-                            <form action="<?php echo URLROOT ;?>/UserController/insert" method="post">
-                            <div class="mb-3">
-                                <label for="titre" name="titre" class="col-form-label">Tittre:</label>
-                                <input type="text" name="titre" class="form-control" >
+                                           <!------ form add Post ------>
+                            <form action="<?php echo URLROOT ;?>/PostController/insert" method="post">
+                            <!-- full name -->
+                            <div class=" form-item mb-3">
+                                <label for="fullname" name="fullname" class="col-form-label">Full name:</label>
+                                <input  name="fullname" class="form-control">
                             </div>
+                            <!-- email -->
                             <div class="mb-3">
-                                <label for="description" class="col-form-label">Description:</label>
-                                <input class="form-control" name="description" >
+                                <label for="email" class="col-form-label">email:</label>
+                                <input class="form-control" name="email" >
                             </div>
+                            <!-- adress -->
                             <div class="mb-3">
-                                <label for="contenu"  class="col-form-label">Contenu:</label>
-                                <input class="form-control" name="contenu" id="message-text">
+                                <label for="adress"  class="col-form-label">adress:</label>
+                                <input class="form-control" name="adress" id="message-text">
+                            </div>
+                            <!-- phone -->
+                            <div class="mb-3">
+                                <label for="phone"  class="col-form-label">Phone number:</label>
+                                <input class="form-control" name="phone" id="message-text">
+                            </div>
+                            <!-- details -->
+                            <div class="mb-3">
+                                <label for="details"  class="col-form-label">Details:</label>
+                                <textarea class="form-control" name="details" id="message-text"></textarea>
                             </div>
                             <button
                                 type="submit" value="submit" name="submit_add" style="margin-top: 20px;"
-                                class="btn btn-outline-warning btn-rounded"
+                                class="btn btn-outline-primary btn-rounded"
                                 data-mdb-ripple-color="dark"
-                                >submit</button>
+                                >Add</button>
                             </div>
                           </div>
                         </div>
@@ -99,8 +113,9 @@ $id = $_SESSION['id'] ;
                   
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="<?php echo URLROOT;?>/UserController/user_post">Posts</a></li>
+                  <li><a class="dropdown-item" href="<?php echo URLROOT;?>/PostController/index">Posts</a></li>
                   <li><a class="dropdown-item" href="<?php echo URLROOT ; ?>/UserController/rendezvous">DONATE</a></li>
+                  <li><a class="dropdown-item" href="<?php echo URLROOT ; ?>/UserController/rendezvous">Delete account</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <!-- <form action="post" action=""> -->
                   <li><a class="dropdown-item " href="<?php echo URLROOT; ?>/UserController/logout"> <button class="bg-danger text-white" type="submit" name="logout">Logout</button> </a></li>
@@ -110,41 +125,42 @@ $id = $_SESSION['id'] ;
              <a class="nav-link active " style="" aria-current="page" href="<?php echo URLROOT ;?>/UserController/profil"> <p style="margin-left: 188px;">Welcome
              <span style="color:blue"><?php echo $name_session; ?> </span></p></a>
               </li>
-              </li>
-
-              <!-- <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" style="margin-left: 211px;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  More
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="<?php echo URLROOT;?>/UserController/user_post">Posts</a></li>
-                  <li><a class="dropdown-item" href="<?php echo URLROOT ; ?>/UserController/rendezvous">DONATE</a></li>
-                  <li><a class="dropdown-item" href="<?php echo URLROOT ; ?>/UserController/rendezvous">Delete account</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><input type="submit" value="Logout" name="logout" class="dropdown-item bg-danger text-white" href="<?php echo URLROOT; ?>/UserCotroller/logout"></li>
-                </ul>
-                </a> -->
-               
-               
-              
-            <!-- </ul> -->
-              
-              
-           
+              </li>  
           </div>
         </div>
       </nav>
 
       
-      <form style="width: 58%; margin: auto;margin-top: 115px;" action="<?php echo URLROOT; ?>/UserController/update?id=<?php echo $id ?>" method="POST">
+      <form style="width: 58%; margin: auto;margin-top: 115px;" action="<?php echo URLROOT; ?>/UserController/update?id_user=<?php echo $id ?>" method="POST">
  <h3>Account</h3>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" value="<?php echo $email_session; ?>" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input type="email" name="email" class="form-control" value="<?php echo $email_session; ?>" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="text" class="form-control" value="<?php echo $password; ?>" id="exampleInputPassword1">
+    <input type="text" name="password" class="form-control" value="<?php echo $password; ?>" id="exampleInputPassword1">
   </div>
+  <!-- <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">full_name</label>
+    <input type="text" name="full_name" class="form-control" value="" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">ville</label>
+    <input type="text" name="ville" class="form-control" value="" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">cin</label>
+    <input type="text" name="cin" class="form-control" value="" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">g_sang</label>
+    <input type="text"  name="g_sang" class="form-control" value="" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Phone</label>
+    <input type="text" name="phone" class="form-control" value="" id="exampleInputPassword1">
+  </div> -->
  
   <button  type="submit"  name="update" class="btn btn-primary">Edit info</button>
   

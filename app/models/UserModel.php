@@ -123,25 +123,32 @@ class UserModel {
         return ($result);
       
     }
-    public function updatePost($params)
-    {
-      $this->database->query("UPDATE reg_user  SET email= :email, password= :password WHERE id_user = :id");
-      $this->database->bind(':email', $params['email']);
-      $this->database->bind(':password',$params['password']);
-      $this->database->bind(':id',$params['id']);
+    // public function updatePost($params)
+    // {
+    //   $this->database->query("UPDATE reg_user  SET email= :email, password= :password, full_name= :full_name, g_sang= :g_sang, ville= :ville, phone= :phone, cin= :cin WHERE id_user = :id");
+    //   $this->database->bind(':email', $params['email']);
+    //   $this->database->bind(':password',$params['password']);
+    //   $this->database->bind(':full_name',$params['full_name']);
+    //   $this->database->bind(':id_user',$params['id_user']);
 
-      $params=$this->database->execute();
-      if($this->database->execute()){
-          return true;
-        } else {
-          return false;
-        }
 
-    }
+    //   $this->database->bind(':g_sang',$params['g_sang']);
+    //   $this->database->bind(':ville',$params['ville']);
+    //   $this->database->bind(':phone',$params['phone']);
+    //   $this->database->bind(':cin',$params['cin']);
+
+    //   $params=$this->database->execute();
+    //   if($this->database->execute()){
+    //       return true;
+    //     } else {
+    //       return false;
+    //     }
+
+    // }
 
     public function getUserbyId($id){
-        $this->database->query("SELECT * FROM  `reg_user` WHERE id_user = :id");
-        $this->database->bind(':id',$id);
+        $this->database->query("SELECT * FROM  `reg_user` WHERE id_user = :id_user");
+        $this->database->bind(':id_user',$id);
   
         $results = $this->database->single();
   

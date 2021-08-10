@@ -99,7 +99,7 @@
                     <!-- <span><?php echo $post->fullname ?></span> -->
                     <span><?php echo $post->email ?></span>
                     <span><?php echo $post->adress ?></span>
-                    <span>Creat at : <?php echo $post->created_at ?></span>
+                    <span> <?php echo 'Creat at :' . date('F j h:m' , strtotime($post->created_at)) ?></span>
                     <span>Phone number : <?php echo $post->phone ?></span>
                 </div>
                 <h1 class="blog-post_title"><?php echo $post->fullname ?></h1>

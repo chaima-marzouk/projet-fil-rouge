@@ -49,7 +49,7 @@
                 <a href="<?php echo URLROOT;?>/UserController/donorsliste" class="nav-link" class="nav-link">Donate</a>
             </li>
             <li class="nav-items">
-                <a href="<?php echo URLROOT;?>/UserController/post" class="nav-link"class="nav-link">Post</a>
+                <a href="<?php echo URLROOT;?>/PostController/index" class="nav-link"class="nav-link">Post</a>
             </li>
             <li class="nav-items">
                 <a href="<?php echo URLROOT;?>/UserController/admin_signin" class="nav-link">login</a>
@@ -71,7 +71,7 @@
                         Sometimes we tend to forget how easy can be to help another human been but this page manages to remind us. By highlighting the simplicity of the process, the slogan has also the merit to comfort and convince people that are afraid of donating blood to give it a try
                         </p>
                         <div class="cta">
-                            <a href="" class="btnn">Donate now</a>
+                            <a href="<?php echo URLROOT?>/PostController/insert" class="btnn">Donate now</a>
                         </div>
                     </div>
                 </div>
@@ -123,29 +123,7 @@
     </section>
 
     <section class="tests">
-        <!-- <div class="container2">
-            <div class="test">
-                <div class="test-text-box">
-                <div class="social-media">
-              <a href="#" class="social-icon">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-google"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </div>
-                </div>
-               
-            </div>
-        </div> -->
-        
-
+       
     </section>
     
 
