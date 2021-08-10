@@ -147,8 +147,8 @@ class UserModel {
     // }
 
     public function getUserbyId($id){
-        $this->database->query("SELECT * FROM  `reg_user` WHERE id_user = :id_user");
-        $this->database->bind(':id_user',$id);
+        $this->database->query("SELECT * FROM  `reg_user` WHERE user_id = :user_id");
+        $this->database->bind(':user_id',$id);
   
         $results = $this->database->single();
   

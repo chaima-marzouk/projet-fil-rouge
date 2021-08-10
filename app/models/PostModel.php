@@ -26,6 +26,47 @@ class PostModel{
         $this->db->bind(':phone', $data['phone']);
         $this->db->bind(':details', $data['details']);
         $this->db->bind(':created_at', $data['created_at']);
+        if ($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function findPostById($id) {
+        $this->db->query('SELECT * FROM post WHERE id = :id');
+
+        $this->db->bind(':id', $id);
+
+        $row = $this->db->single();
+
+        return $row;
+    }
+
+
+    public function updatePost($data) {
+        $this->db->query('UPDATE post SET fullname = :fullname, email = :email, adress = :adress, phone = :phone, details = :details, created_at WHERE id = :id');
+        
+
+        $this->db->bind(':id', $data['id']);
+        $this->db->bind(':fullname', $data['fullname']);
+        $this->db->bind(':email', $data['email']);
+        $this->db->bind(':adress', $data['adress']);
+        $this->db->bind(':phone', $data['phone']);
+        $this->db->bind(':details', $data['details']);
+        $this->db->bind(':created_at', $data['created_at']);
+        if ($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+    public function deletePost($id) {
+        $this->db->query('DELETE FROM post WHERE id = :id');
+
+        $this->db->bind(':id', $id);
 
         if ($this->db->execute()) {
             return true;

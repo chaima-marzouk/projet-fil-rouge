@@ -15,6 +15,7 @@
      <link rel="stylesheet" type="text/css" href="<?php echo URLROOT; ?>/css/stylePost.css">
      <!-- Bootstrap -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     <!-- fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
@@ -31,8 +32,7 @@
                     <i class="icon ion-md-menu" style="margin-right: 30px;"></i>
                 </div>
             </nav>
-
-        </div>
+         </div>
  
         <ul class="nav-list">
             <div class="menu-icons close">
@@ -58,7 +58,7 @@
             </li>
             
         </ul>
-    </header>
+ </header>
 
 <main>
     <section class="hero">
@@ -84,43 +84,63 @@
             </div>
     </section>
 
-<section class="Achawahada">
-    <h1>Posts</h1>
-    <?php foreach($data['posts'] as $post):?>
-    <section class="post-section">
-        <div class="blog_post">
-            <div class="blog-post_img">
-                <img src="<?php echo URLROOT;?>/img/no.png " alt="post image">
-            </div>
-            <div class="blog-post_info">
-                <div class="blog-post_date">
-                    <!-- <span><?php echo $post->fullname ?></span> -->
-                    <span><?php echo $post->email ?></span>
-                    <span><?php echo $post->adress ?></span>
-                    <span> <?php echo 'Creat at :' . date('F j h:m' , strtotime($post->created_at)) ?></span>
-                    <span>Phone number : <?php echo $post->phone ?></span>
+    <section class="Achawahada">
+        <h1>Posts</h1>
+        <?php foreach($data['posts'] as $post):?>
+        <section class="post-section">
+            <div class="blog_post">
+                <div class="blog-post_img">
+                    <img src="<?php echo URLROOT;?>/img/no.png " alt="post image">
                 </div>
-                <h1 class="blog-post_title"><?php echo $post->fullname ?></h1>
-                <p class="blog-post_details">
-                <?php echo $post->details ?>
-                </p>
-                <a href="" class="blog-post_cta">Donate</a>
-            </div>  
-        </div>  
+                <div class="blog-post_info">
+                    <div class="blog-post_date">
+                    <?php if(isset($_SESSION['user_id']) && $_SESSION['user_id'] == $post->user_id): ?>
+                    
+
+                        <div class="btn-group">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            More
+                        </button>
+                            <div class="dropdown-menu bg_grey dropdown-menu-right" style="margin-left: 335%; ">
+                                <a href="<?php echo URLROOT . "/PostController/update/" . $post->id ?>">
+                                            <!-- DELETE BUTTON -->
+                                        <div class="dropdown-item">          
+                                            <input name="update" value="Update"  type="submit" style="background:green;"></a>
+                                            </div>
+                                            <!-- DELETE BUTTON -->
+                                        <form class="dropdown-item" action="<?php echo URLROOT . "/PostController/delete/" . $post->id ?>" method="POST">
+                                            <input type="submit" name="delete" value="Delete" style="background:red;" >
+                                        </form>
+                            </div>
+                        </div>
+                    
+                     <?php endif; ?>
+                        <span><?php echo $post->email ?></span>
+                        <span><?php echo $post->adress ?></span>
+                        <span> <?php echo 'Creat at :' . date('F j h:m' , strtotime($post->created_at)) ?></span>
+                        <span>Phone number : <?php echo $post->phone ?></span>
+                    </div>
+                        <h1 class="blog-post_title"><?php echo $post->fullname ?></h1>
+                        <p class="blog-post_details">
+                        <?php echo $post->details ?>
+                        </p>
+                        <a href="" class="blog-post_cta">Donate</a>
+                    </div>  
+                </div>  
     </section>
-    <?php endforeach ; ?>
+                     <?php endforeach ; ?>
    
         
     </section> 
- </section>
-    <section class="tests">
-        <div class="container2">
-            <div class="test">
-                <div class="test-text-box">
-                </div>       
-            </div>
-        </div>
     </section>
+        <section class="tests">
+            <div class="container2">
+                <div class="test">
+                    <div class="test-text-box">
+                    </div>       
+                </div>
+            </div>
+        </section>
 </main>
 
 
@@ -225,5 +245,11 @@
 
         
     </style>
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
 </body>
 </html>
