@@ -70,13 +70,12 @@
 
         public function logout() {
             
-        session_destroy();
-         
+        unset($_SESSION['user_id']);
+        unset($_SESSION['username']);
+        unset($_SESSION['email']);
         $this->view('pages/Admin_login');
-            
-        }
         
-
+        }
 
         public function insert()
         {

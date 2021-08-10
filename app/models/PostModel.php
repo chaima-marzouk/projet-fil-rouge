@@ -45,7 +45,7 @@ class PostModel{
 
 
     public function updatePost($data) {
-        $this->db->query('UPDATE post SET fullname = :fullname, email = :email, adress = :adress, phone = :phone, details = :details, created_at WHERE id = :id');
+        $this->db->query('UPDATE post SET fullname = :fullname, email = :email, adress = :adress, phone = :phone, details = :details, created_at = :created_at  WHERE id = :id');
         
 
         $this->db->bind(':id', $data['id']);
