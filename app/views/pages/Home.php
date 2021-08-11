@@ -93,24 +93,41 @@
                     <div class="card ">
                         <img class="card-img-top" src="<?php echo URLROOT?>/img/ask1.png"  alt="Card image cap">
                         <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <h5 class="card-title text-danger">Am I Eligible to Donate Blood after Covid vaccin ?</h5>
+                        <p class="card-text ">Great news: if you receive the vaccine, you can still donate blood, platelets and AB Elite plasma! Donating blood is essential to help save lives and support the efforts of those on the frontlines of the pandemic..</p>
+                        <h5 class="card-title text-danger">Is donating blood safe?</h5>
+                        <p class="card-text ">Absolutely. Blood donation conditions are sanitary, and needles are sterile and disposable...</p>
                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                         </div>
                     </div>
                     <div class="card">
                         <img class="card-img-top" src="<?php echo URLROOT?>/img/ask222.jpg"  alt="Card image cap">
                         <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                        <h5 class="card-title text-danger">What are the major blood types?</h5>
+                        <p class="card-text">
+                        <span class="text-success">O Positive </span> -> O+, A+, B+, AB+  <span class="text-danger">You can receive from:</span> O+, O-<br>
+                        <span class="text-success">A Positive </span> -> A+, AB+  <span class="text-danger">You can receive from:</span>A+, A-, O+, O-<br>
+                        <span class="text-success">B Positive </span> -> B+, AB+ <span class="text-danger">You can receive from:</span>B+, B-, O+, O-<br>
+                        <span class="text-success">AB Positive </span> -> AB+ Only <span class="text-danger">You can receive from:</span>All Blood Types<br>
+                        <span class="text-success">O Positive </span> -> O Negative <span class="text-danger">You can receive from:</span>	O-<br>
+                        <span class="text-success">A Negative </span> -> A-, A+, AB-, AB+ <span class="text-danger">You can receive from:</span>A-, O-<br>
+                        <span class="text-success">B Negative </span> -> B-, B+, AB-, AB+ <span class="text-danger">You can receive from:</span>B-, O-<br>
+                        <span class="text-success">AB Negative </span> -> AB-, AB+ <span class="text-danger">You can receive from:</span>AB-, A-, B-, O-<br>
+                         <br>
+
+                        </p>
                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                         </div>
                     </div>
                     <div class="card">
                         <img class="card-img-top" src="<?php echo URLROOT?>/img/ask3.jpg" alt="Card image cap">
                         <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                        <h5 class="card-title text-danger">Are you eligible for blood donation?</h5>
+                        <p class="card-text"> 
+                        Find out about the eligibility requirements
+                        to donate blood today. Learn about 
+                        general health, travel, medications, 
+                        tattoos, and more...</p>
                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                         </div>
                     </div>

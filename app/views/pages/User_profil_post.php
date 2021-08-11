@@ -32,7 +32,7 @@
                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                                  <div class="modal-body">
-                                           <!------ form add episode ------>
+                                           <!------ form add  ------>
                             <form action="<?php echo URLROOT ;?>/UserController/insert" method="post">
                             <div class="mb-3">
                                 <label for="titre" name="titre" class="col-form-label">Tittre:</label>

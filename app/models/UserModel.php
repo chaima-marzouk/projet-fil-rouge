@@ -123,32 +123,32 @@ class UserModel {
         return ($result);
       
     }
-    // public function updatePost($params)
-    // {
-    //   $this->database->query("UPDATE reg_user  SET email= :email, password= :password, full_name= :full_name, g_sang= :g_sang, ville= :ville, phone= :phone, cin= :cin WHERE id_user = :id");
-    //   $this->database->bind(':email', $params['email']);
-    //   $this->database->bind(':password',$params['password']);
-    //   $this->database->bind(':full_name',$params['full_name']);
-    //   $this->database->bind(':id_user',$params['id_user']);
+    public function updatePost($params)
+    {
+      $this->database->query("UPDATE reg_user  SET email= :email, password= :password, full_name= :full_name, g_sang= :g_sang, ville= :ville, phone= :phone, cin= :cin WHERE id_user = :id");
+      $this->database->bind(':email', $params['email']);
+      $this->database->bind(':password',$params['password']);
+      $this->database->bind(':full_name',$params['full_name']);
+      $this->database->bind(':id_user',$params['id_user']);
 
 
-    //   $this->database->bind(':g_sang',$params['g_sang']);
-    //   $this->database->bind(':ville',$params['ville']);
-    //   $this->database->bind(':phone',$params['phone']);
-    //   $this->database->bind(':cin',$params['cin']);
+      $this->database->bind(':g_sang',$params['g_sang']);
+      $this->database->bind(':ville',$params['ville']);
+      $this->database->bind(':phone',$params['phone']);
+      $this->database->bind(':cin',$params['cin']);
 
-    //   $params=$this->database->execute();
-    //   if($this->database->execute()){
-    //       return true;
-    //     } else {
-    //       return false;
-    //     }
+      $params=$this->database->execute();
+      if($this->database->execute()){
+          return true;
+        } else {
+          return false;
+        }
 
-    // }
+    }
 
     public function getUserbyId($id){
-        $this->database->query("SELECT * FROM  `reg_user` WHERE user_id = :user_id");
-        $this->database->bind(':user_id',$id);
+        $this->database->query("SELECT * FROM  `reg_user` WHERE user_id = :id");
+        $this->database->bind(':id',$id);
   
         $results = $this->database->single();
   
