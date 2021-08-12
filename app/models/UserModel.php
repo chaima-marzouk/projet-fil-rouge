@@ -10,6 +10,9 @@ class UserModel {
         $this->database = new Database; //objet
 
     }
+
+    //-------------------------------- DONOR SECTION-----------------------------------------------------------\\
+
     public function getDonor()
     {
         //preparation de la query
@@ -54,6 +57,9 @@ class UserModel {
         }
 
     }
+
+
+    //-------------------------------- USER SECTION-----------------------------------------------------------\\
 
      // Find user by email
      public function findUserByEmail($email)
@@ -123,21 +129,19 @@ class UserModel {
         return ($result);
       
     }
-    public function updatePost($params)
+    
+    public function updateUser($data)
     {
-      $this->database->query("UPDATE reg_user  SET email= :email, password= :password, full_name= :full_name, g_sang= :g_sang, ville= :ville, phone= :phone, cin= :cin WHERE id_user = :id");
-      $this->database->bind(':email', $params['email']);
-      $this->database->bind(':password',$params['password']);
-      $this->database->bind(':full_name',$params['full_name']);
-      $this->database->bind(':id_user',$params['id_user']);
+      $this->database->query("UPDATE reg_user  SET email = :email, password = :password WHERE id_user = :id");
 
+      $this->database->bind(':id', $data['id']);
+      $this->database->bind(':email', $data['email']);
+      $this->database->bind(':password',$data['password']);
+      
+     
 
-      $this->database->bind(':g_sang',$params['g_sang']);
-      $this->database->bind(':ville',$params['ville']);
-      $this->database->bind(':phone',$params['phone']);
-      $this->database->bind(':cin',$params['cin']);
+      $data=$this->database->execute();
 
-      $params=$this->database->execute();
       if($this->database->execute()){
           return true;
         } else {
@@ -153,5 +157,6 @@ class UserModel {
         $results = $this->database->single();
   
         return $results;
+        
       }
 }

@@ -1,89 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-     <!--Ion Icons-->
-     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
-    <!--Google Fonts-->
-     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css?family=Aldrich&display=swap" rel="stylesheet">
-     <!-- stylesheet -->
-     <link rel="stylesheet" type="text/css" href="<?php echo URLROOT; ?>/css/styleHome.css">
-     <link rel="stylesheet" type="text/css" href="<?php echo URLROOT; ?>/css/style.scss">
-     <!-- Bootstrap -->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-    <!-- fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-<header>
-        <div class="container">
-            <nav style="display: flex;">
-                <div class="nav-barand">
-                    <img src="<?php echo URLROOT; ?>/img/logob.png" alt="LOGO">
-                </div>
-                <div class="menu-icons open">
-                    <i class="icon ion-md-menu" style="margin-right: 30px;"></i>
-                </div>
-            </nav>
+<!-- --------header-------- -->
+<?php
+   require APPROOT . '/views/inc/header.php';
+?>
+<!-- --------header-------- -->
 
-        </div>
- 
-        <ul class="nav-list">
-            <div class="menu-icons close">
-                <i class="icon ion-md-close"></i>
-            </div>
-            <li class="nav-items">
-                <a href="<?php echo URLROOT;?>/UserController/index" class="nav-link" class="nav-link">Home</a>
-            </li>
-            <li class="nav-items">
-                <a href="<?php echo URLROOT;?>/UserController/about" class="nav-link" class="nav-link">About</a>
-            </li>
-            <li class="nav-items">
-                <a href="<?php echo URLROOT;?>/UserController/donorsliste" class="nav-link" class="nav-link">Donate</a>
-            </li>
-            <li class="nav-items">
-                <a href="<?php echo URLROOT;?>/UserController/post" class="nav-link"class="nav-link">Post</a>
-            </li>
-            <li class="nav-items">
-                <a href="<?php echo URLROOT;?>/UserController/admin_signin" class="nav-link">login</a>
-            </li>
-            <li class="nav-items">
-                <a href="<?php echo URLROOT;?>/UserController/contactUs" class="nav-link">Contact us</a>
-            </li>
-            
-        </ul>
-    </header>
-
-<main>
-    <section class="hero">
-        <div class="container">
-            <div class="main-message">
-                <h3>#Give blood</h3>
-                <h1>DONATE BLOOD | SAVE A LIFE</h1>
-                <p>
-                Sometimes we tend to forget how easy can be to help another human been but this page manages to remind us. By highlighting the simplicity of the process, the slogan has also the merit to comfort and convince people that are afraid of donating blood to give it a try
-                </p>
-                <div class="cta">
-                    <a href="" class="btnn">Donate now</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="experience-outdoors">
-         <!-- <div class="container "> -->
-            <div class="activities-gride">    
-                <!-- grid item  -->
+    <section class="experience-outdoors">  
+            <div class="activities-gride">             
                 <div class="activities-grid-item star-gazing">    
                 </div>
-            </div>
-        <!-- </div> -->
+            </div>    
     </section>
 
     <section>
@@ -95,7 +20,6 @@
             <table>
                 <tr>
                 <th scope="col">Full name</th>
-                <!-- <th scope="col">CND</th> -->
                 <th scope="col">Adress</th>
                 <th scope="col">Blood G.</th>
                 <th scope="col">Phone nember</th>
@@ -104,7 +28,6 @@
                     <?php foreach ($data["donors"] as $row) :?>
                 <tr>
                 <td><?php echo $row->full_name ;?></td>
-                        <!-- <td><?php echo $row->cdn ;?></td> -->
                         <td><?php echo $row->adress ;?></td>
                         <td><?php echo $row->blood_group ;?></td>
                         <td><?php echo $row->phone ;?></td>
@@ -116,7 +39,6 @@
     </div>
     </section>
     <section class="form-section">
-    <!-- <h3>Using CSS to style an HTML Form</h3> -->
         <div class="form-liste">
             <form action="<?php echo URLROOT?>/UserController/insert" method="post">
                 <label for="fname">Full Name</label>
@@ -153,114 +75,31 @@
         </div>
     </section>
 
-    <section class="tests">
-        <div class="container2">
-            <div class="test">
-                <div class="test-text-box">
-                </div>       
-            </div>
-        </div>
-    </section>
-</main>
+   
 
 
 
 
 
-
-
-
-<script type="text/javascript" >
-                // Function expression to select elements.
-            const selectElement = (s) => document.querySelector(s);
-
-
-                //Open the menu on click
-            selectElement('.open').addEventListener('click', () => {
-            selectElement('.nav-list').classList.add('active');
-            });
-
-
-                //Close the menu on click
-            selectElement('.close').addEventListener('click', () => {
-            selectElement('.nav-list').classList.remove('active');
-            });
+    <!-- -------JS------- -->
+    <script type="text/javascript" src="public/js/app.js">
     </script>
+    <!-- -------JS------- -->
 
-<style>
-        .hero{
-            background:url(<?=URLROOT?>/img/testo2.jpg) fixed
-        }
 
-        .hero::before{
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            height: 17.7rem;
-            background-size:cover;
-            background: url(<?=URLROOT?>/img/wave-large.png) center no-repeat 
-            
-        }
 
-        .ion-md-close:before {
+    <!-- -------footer------- -->
+    <?php
+   require APPROOT . '/views/inc/footer.php';
+   ?>
+    <!-- -------footer------- -->
 
-            color: #fafafa;
-        }
 
-        .activities-grid-item::before{
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 97%; 
-            background-color: #63a4ff;
-            background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
-            z-index: -1;
-        }
-
-        .tests{
-            width: 100%;
-            height: 80vh;
-            margin-top: 45px;
-            background-size: cover;
-            position: relative;
-            background:url(<?=URLROOT?>/img/donlist.png)  center no-repeat fixed 
-            
-            }
-
-            .tests::before{
-                content:"";
-                margin-top: -2px;
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 17.7rem;
-                background-size: cover;
-                background-image: url(<?=URLROOT?>/img/wave-large-reversed.png)
-            }
-
-            h1{
-                margin-top: 20px;
-            }
-
-            .form-section{
-                background-size: cover;
-                background-image: fixed ;
-                width: 100%;
-                position: relative;
-                background: url(<?=URLROOT?>/img/testo2.jpg) fixed center
-               
-               
-           }
-           span{
+    <style>
+          span{
             background: rgb(107,188,226);
             background: linear-gradient(0deg, rgba(107,188,226,1) 43%, rgba(255,48,40,1) 100%);
             }
-        
     </style>
 </body>
 </html>

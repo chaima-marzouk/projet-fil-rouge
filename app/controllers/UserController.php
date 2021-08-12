@@ -10,10 +10,8 @@
            
             $data = [
                 "donors" => $donors,
-
             ];
             $this->view('pages/Home',$data);
-            // $this->view('pages/donors-liste',$data);
         } 
         
         public function delete()
@@ -21,8 +19,8 @@
             $data = [
                 'id' => $_GET['id'],
             ]; 
+
             $this->callModel->removeDonor($data);
-            // $this->view('pages/Admin');
             header('location:' . URLROOT . '/' . 'UserController/index');
 
         }
@@ -46,12 +44,11 @@
         }
 
         public function user_profil(){
-        //     $user = $this->callModel->getUserbyId();
-        //    $id =  $_SESSION['user_id'];
            
 
-            $this->view('pages/user_profil');
+         $this->view('pages/user_profil');
         }
+
         public function user_post(){
             $this->view('pages/user_profil_post');
         }
@@ -66,8 +63,13 @@
             $this->view('pages/admin');
         }
         public function profil(){
+            $user = $this->postModel->getUser();
 
-            $this->view('pages/profil');
+            $data = [
+                'user' => $user,
+            ];
+
+            $this->view('pages/profil',$data);
         }
 
         public function logout() {
@@ -220,31 +222,38 @@
 
         public function update($id)
         {
-            
+            $user = $this->callModel->getUserbyId($id);
+
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                $params=[ 
-                    'id' => $id,
-                    'user_id' => $_SESSION['id_user'],
+                $data=[ 
+                    'user' => $user,
                     'email' =>$_POST['email'],
                     'password' => $_POST['password'],
-                    'g_sang' => $_POST['g_sang'],
-                    'phone' => $_POST['phone'],
-                    'ville' => $_POST['ville'],
-                    'cin' => $_POST['cin']
                     ];
 
-                    var_dump($id);
-                    die();
-                    $this->callModel->updatePost($params);
-                    header('location:'.URLROOT.'/' . 'pages/user_profil'); 
-            }else{
-                
-
-              $data = $this->callModel->getUserbyId($id);
-            //   var_dump($data);
-
-                $this->view('pages/user_profil',$data);
-            }
+                    if($_SERVER['REQUEST_METHOD'] == 'POST') {
+                        $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+            
+                        $data = [
+                            'user_id' => $_SESSION['user_id'],
+                            'user' => $user,
+                            'email' => trim($_POST['email']),
+                            'password' => trim($_POST['password']),
+                        ];
+            
+                       
+                            if ($this->callModel->updateUser($data)) {
+                                echo "<script>alert(\"Post updated succefully :)\")</script>";
+                            } else {
+                                echo "<script>alert(\"oupsiiiii :( \")</script>";
+                            }
+                        } else {
+                            $this->view('pages/user_profil', $data);
+                        }
+                    
+            
+                    $this->view('pages/user_profil',$data);
+                }
            
         }
 
@@ -289,66 +298,24 @@
 
 
 
-    // public function update($id) {
+    public function deleteAccount($id) {
 
-    //     $post = $this->postModel->findPostById($id);
+        $user = $this->postModel->getUserbyId($id);
 
-    //     if(!isLoggedIn()) {
-    //         header("Location: " . URLROOT . "/posts");
-    //     } elseif($post->user_id != $_SESSION['user_id']){
-    //         header("Location: " . URLROOT . "/posts");
-    //     }
+        $data = [
+            'user' => $user,
+        ];
 
-    //     $data = [
-    //         'post' => $post,
-    //         'title' => '',
-    //         'body' => '',
-    //         'titleError' => '',
-    //         'bodyError' => ''
-    //     ];
+        if($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
-    //     if($_SERVER['REQUEST_METHOD'] == 'POST') {
-    //         $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
-
-    //         $data = [
-    //             'id' => $id,
-    //             'post' => $post,
-    //             'user_id' => $_SESSION['user_id'],
-    //             'title' => trim($_POST['title']),
-    //             'body' => trim($_POST['body']),
-    //             'titleError' => '',
-    //             'bodyError' => ''
-    //         ];
-
-    //         if(empty($data['title'])) {
-    //             $data['titleError'] = 'The title of a post cannot be empty';
-    //         }
-
-    //         if(empty($data['body'])) {
-    //             $data['bodyError'] = 'The body of a post cannot be empty';
-    //         }
-
-    //         if($data['title'] == $this->postModel->findPostById($id)->title) {
-    //             $data['titleError'] == 'At least change the title!';
-    //         }
-
-    //         if($data['body'] == $this->postModel->findPostById($id)->body) {
-    //             $data['bodyError'] == 'At least change the body!';
-    //         }
-
-    //         if (empty($data['titleError']) && empty($data['bodyError'])) {
-    //             if ($this->postModel->updatePost($data)) {
-    //                 header("Location: " . URLROOT . "/posts");
-    //             } else {
-    //                 die("Something went wrong, please try again!");
-    //             }
-    //         } else {
-    //             $this->view('posts/update', $data);
-    //         }
-    //     }
-
-    //     $this->view('posts/update', $data);
-    // }
+            if($this->postModel->deletePost($id)) {
+                echo "<script>alert(\"Post Deleted succefully :)\")</script>";
+            } else {
+               die('Something went wrong!');
+            }
+        }
+    }
 
 
 

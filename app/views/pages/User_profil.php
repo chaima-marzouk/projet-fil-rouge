@@ -43,8 +43,15 @@ $id = $_SESSION['user_id'];
     <header><img src="<?php echo URLROOT ; ?>/img/logob.png" alt="logo"></header>
      <ul>
      <button  type="button" class="btn text-white bg-primary m-2"  data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Add new post</button>
-        <li><a href=""><?php echo $name_session; ?></a></li>
-        <li><a href="<?php echo URLROOT ;?>/UserController/profil">Profil</a></li>   
+     <li class="nav-items">
+                <a href="<?php echo URLROOT;?>/UserController/index" class="nav-link" class="nav-link">Home</a>
+            </li>
+            <li >
+                <a href="<?php echo URLROOT;?>/UserController/donorsliste" class="nav-link">Donate</a>
+            </li> 
+            <li class="nav-items">
+                <a href="<?php echo URLROOT;?>/UserController/contactUs" class="nav-link">Contact us</a>
+            </li> 
     </ul> 
 </div> 
 
@@ -106,9 +113,9 @@ $id = $_SESSION['user_id'];
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style=" margin-left: 249px; margin-top: 20px;">
         <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"      aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
@@ -139,39 +146,17 @@ $id = $_SESSION['user_id'];
 
       
       <form style="width: 58%; margin: auto;margin-top: 115px;" action="<?php echo URLROOT; ?>/UserController/update?id_user=<?php echo $id ?>" method="POST">
- <h3>Account</h3>
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" name="email" class="form-control" value="<?php echo $email_session; ?>" id="exampleInputEmail1" aria-describedby="emailHelp">
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="text" name="password" class="form-control" value="<?php echo $password; ?>" id="exampleInputPassword1">
-  </div>
-  <!-- <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">full_name</label>
-    <input type="text" name="full_name" class="form-control" value="" id="exampleInputPassword1">
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">ville</label>
-    <input type="text" name="ville" class="form-control" value="" id="exampleInputPassword1">
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">cin</label>
-    <input type="text" name="cin" class="form-control" value="" id="exampleInputPassword1">
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">g_sang</label>
-    <input type="text"  name="g_sang" class="form-control" value="" id="exampleInputPassword1">
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Phone</label>
-    <input type="text" name="phone" class="form-control" value="" id="exampleInputPassword1">
-  </div> -->
- 
-  <button  type="submit"  name="update" class="btn btn-primary">Edit info</button>
-  
-</form>
+        <h3>Account</h3>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" name="email" class="form-control" value="<?php echo $email_session; ?>" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="text" name="password" class="form-control" value="<?php echo $password; ?>" id="exampleInputPassword1">
+          </div>
+        <button  type="submit"  name="update" class="btn btn-primary">Edit info</button>
+      </form>
 
 
 

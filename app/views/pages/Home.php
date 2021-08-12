@@ -86,9 +86,7 @@
                 </div>
             </section>
 
-
             <section class="card_section">
-
                 <div class="card-deck">
                     <div class="card ">
                         <img class="card-img-top" src="<?php echo URLROOT?>/img/ask1.png"  alt="Card image cap">
@@ -97,7 +95,10 @@
                         <p class="card-text ">Great news: if you receive the vaccine, you can still donate blood, platelets and AB Elite plasma! Donating blood is essential to help save lives and support the efforts of those on the frontlines of the pandemic..</p>
                         <h5 class="card-title text-danger">Is donating blood safe?</h5>
                         <p class="card-text ">Absolutely. Blood donation conditions are sanitary, and needles are sterile and disposable...</p>
+                        <h5 class="card-title text-danger">How will I feel after donating? What activities can I do after my donation?</h5>
+                        <p class="card-text ">Most donors feel fine after donating. Remember to eat a healthy meal afterwards and drink plenty of fluids. You can continue your normal routine, but avoid heavy lifting and strenuous exercise for 12 hours.</p>
                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        How will I feel after donating? What activities can I do after my donation?
                         </div>
                     </div>
                     <div class="card">
@@ -128,6 +129,10 @@
                         to donate blood today. Learn about 
                         general health, travel, medications, 
                         tattoos, and more...</p>
+                        <h5 class="card-title text-danger">What should I do to prepare for donating?</h5>
+                        <p class="card-text ">Eat a well-balanced meal, free of fatty or fried foods. A diet that regularly includes iron-rich foods will help promote red cell regeneration, increasing your chances of having an adequate hemoglobin level for blood donation.</p>
+                        <h5 class="card-title text-danger">Who can give blood?</h5>
+                        <p class="card-text ">Almost anyone who is healthy, at least 16 years old, and weighs at least 110 pounds. (16-year-olds must weigh at least 130 lbs and need signed parental consent.)</p>
                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                         </div>
                     </div>

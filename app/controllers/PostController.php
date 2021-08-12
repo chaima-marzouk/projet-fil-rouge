@@ -114,10 +114,6 @@ class PostController extends Controller{
 
         $data = [
             'post' => $post,
-            'title' => '',
-            'body' => '',
-            'titleError' => '',
-            'bodyError' => ''
         ];
 
         if($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -130,5 +126,7 @@ class PostController extends Controller{
             }
         }
     }
+
+    
 
 }
