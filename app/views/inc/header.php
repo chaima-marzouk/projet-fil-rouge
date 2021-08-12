@@ -47,7 +47,10 @@
                     display: none;
                 }
             </style>
+
         <?php endif; ?>
+
+
  
         
 
@@ -57,9 +60,6 @@
             </div>
             <li class="nav-items">
                 <a href="<?php echo URLROOT;?>/UserController/index" class="nav-link" class="nav-link">Home</a>
-            </li>
-            <li class="nav-items">
-                <a href="<?php echo URLROOT;?>/UserController/about" class="nav-link" class="nav-link">About</a>
             </li>
             <li class="nav-items">
                 <a href="<?php echo URLROOT;?>/UserController/donorsliste" class="nav-link" class="nav-link">Donate</a>
@@ -88,6 +88,9 @@
                         </p>
                         <div class="cta">
                             <a href="<?php echo URLROOT?>/UserController/admin_signin" class="btnn">SIGNIN</a>
+                        </div>
+                        <div class="cta">
+                            <a href="<?php echo URLROOT?>/UserController/admin_signin" class="btnnn">Profil</a>
                         </div>
                     </div>
                 </div>

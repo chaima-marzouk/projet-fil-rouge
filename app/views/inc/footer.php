@@ -122,6 +122,10 @@
                 border-radius: .8rem;
             }
 
+            .nav-link{
+                color: #9c27b0;
+            }
+
         
     </style>
 
