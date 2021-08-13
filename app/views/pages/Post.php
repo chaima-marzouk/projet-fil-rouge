@@ -1,5 +1,5 @@
         
-        <?php var_dump($data['comment'][2] );?>
+        <?php var_dump($data['comment']->id_post );?>
         
 
              <!-- --------header-------- -->
@@ -63,7 +63,7 @@
                             <button>Add</button>
                         </form>
 
-                        <?php if(isset($_SESSION['user_id']) && $_SESSION['user_id'] == $post->user_id && $post->id ==  $data['comment'][0]->id_post ): ?>
+                       
 
                        <!-- Button trigger modal -->
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
@@ -87,14 +87,14 @@
                                 <h1>name</h1>
                                 <span><?php echo( $data['comment'][3]->{"comment"})?></span>
                             </div>
-                            <!-- <div>
+                            <div>
                                 <h1>name</h1>
                                 <span>Comment Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quibusdam ad dolorem nisi illum, quam cumque quas dolor, officia optio eaque quisquam dolore ipsa quis rerum ipsam ratione nostrum voluptatibus.</span>
                             </div>
                             <div>
                                 <h1>name</h1>
                                 <span>Comment Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quibusdam ad dolorem nisi illum, quam cumque quas dolor, officia optio eaque quisquam dolore ipsa quis rerum ipsam ratione nostrum voluptatibus.</span>
-                            </div> -->
+                            </div>
                             <!-- <?php endforeach ; ?> -->
                             </div>
                             <div class="modal-footer">
@@ -103,7 +103,7 @@
                             </div>
                         </div>
                         </div>
-                        <?php endif; ?>
+                        
                         
            
                 </div>  
