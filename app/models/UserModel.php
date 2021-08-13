@@ -159,4 +159,39 @@ class UserModel {
         return $results;
         
       }
+
+    //   -----------------admin--------------//
+
+    public function findAdminByEmail($email){
+        $this->database->query('SELECT * FROM admin WHERE email = :email');
+         // Bind value
+         $this->database->bind(':email', $email);
+         
+       
+         $row = $this->database->single();
+ 
+         // Check row
+         if ($this->database->rowCount() > 0) {
+             return true;
+         } else {
+             return false;
+         }
+    }
+
+
+    public function loginAdmin($email, $password)
+    {
+        $this->database->query('SELECT * FROM admin WHERE email = :email');
+        $this->database->bind(':email', $email);
+
+        $row = $this->database->single();
+
+        $hashed_password = $row->password;
+        
+        if ($password == $hashed_password) {
+            return $row;
+        } else {
+            return false;
+        }
+    }
 }

@@ -10,7 +10,7 @@ class PostController extends Controller{
         $post = $this->postModel->findAllPosts();
         $data = [
         'posts' => $post,
-        'comment' => $comment
+        'comment' => $comment,
        ];
         $this->view('pages/Post', $data);
         var_dump($comment);

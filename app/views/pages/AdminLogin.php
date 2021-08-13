@@ -12,18 +12,16 @@
         <div class="container">
             <div class="main">
                 <div class="content">
-                    <h2>Login</h2>
-                     <form  action="<?php echo URLROOT ?>/UserController/  login" method="post" class="">  
+                    <h2>Admin</h2>
+                     <form  action="<?php echo URLROOT ?>/UserController/adminLogin" method="post" class="">  
                         <input type="text" name="email" placeholder="email"  required autofocus=""/>
                         <input type="password" name="password" placeholder="Password" required autofocus=""/>
-                        <button type="submit"  class="btn" />login</button>
+                        <button type="submit"  class="btn">login</button>
                     </form>
-                    <p class="account">Don't have an account ? <a href="<?php echo URLROOT;?>/UserController/register">Register</a></p>
-                    <p class="account "> <a  style="color: red;" href="<?php echo URLROOT;?>/UserController/Adminlog">Admin</a></p>
                 </div>
 
                 <div class="form-img">
-                    <img src="<?php echo URLROOT ;?>/img/auth.png" alt="Authentification image">
+                    <img src="<?php echo URLROOT ;?>/img/privé.png" alt="Authentification image">
                 </div>
             </div>
         </div>
