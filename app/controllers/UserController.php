@@ -32,7 +32,13 @@
         public function admin_signin()
         {
           
-            $this->view('pages/Admin_login');
+            $this->view('pages/login');
+        }
+
+        public function register()
+        {
+          
+            $this->view('pages/register');
         }
         public function donorsliste(){
             $donors = $this->callModel->getDonor();
@@ -113,7 +119,7 @@
         public function signup(){
             if(!isset($_POST['signup'])){
                 //load the view insert
-                $this->view('pages/admin_login');
+                $this->view('pages/login');
             }
 
             else{
@@ -200,7 +206,7 @@
                 } else {
     
                     // Load view with errors
-                    $this->view('pages/Signin', $data);
+                    $this->view('pages/login', $data);
                 }
             } else {
                 // Init data
@@ -280,8 +286,8 @@
 
                 $body .= "From ".$username. "\r\n";
                 $body .= "Email ".$email. "\r\n";
-                $body .= "Message ".$message. "\r\n";
-
+                $body .= "Message ".$message. "\r\n"; 
+                
                 mail($to,$subject,$body);
                 // ini_set('SMTP','smtp.topnet.tn');
                

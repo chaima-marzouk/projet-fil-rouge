@@ -30,6 +30,14 @@
             </div>
             <input type="submit" value="Login" class="btn solid" />
           </form>
+
+
+
+
+
+
+
+          
           <form action="<?php echo URLROOT ?>/UserController/signup" method="post" class="sign-up-form">
             <h2 class="title">Sign up</h2>
             <div class="input-field">

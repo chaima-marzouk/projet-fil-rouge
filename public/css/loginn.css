@@ -1,0 +1,160 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+body{
+    font-family: 'Raleway';
+}
+.login-form{
+    position: relative;
+    min-height: 100vh;
+    z-index: 0;
+    background: #0568c1;
+    padding: 40px;
+    justify-content: center;
+    display: grid;
+    grid-template-rows: 1fr auto 1fr;
+}
+.container{
+    max-width: 800vh;
+    margin: 0 auto;
+}
+.login-form h1{
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 400;
+    color:#fff ;
+}
+.login-form h2{
+    font: 30px;
+    line-height: 40px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #272346;
+    text-align: center;
+}
+.login-form .main{
+    position: relative;
+    display: flex;
+    margin: 30px 0;
+
+}
+.content{
+    flex-basis: 50%;
+    padding: 3em 3em;
+    background: #fff;
+    box-shadow: 2px 9px 49px -17px rgba(0,0,0,0.1);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.form-img{
+    flex-basis: 50%;
+    background: #f4f9fd;
+    background-size: cover;
+    padding: 40px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    align-items: center;
+    display: grid;
+}
+.form-img img{
+    max-width: 100%;
+}
+p{
+    color: #666;
+    font-size: 16px;
+    line-height: 25px;
+    opacity: 0.6;
+    text-align: center;
+}
+.btn,
+button,
+input{
+    border-radius: 35px;
+}
+.btn:hover,
+button:hover{
+    transition: 0.5s ease;
+}
+a{
+    text-decoration: none;
+}
+.login-form form{
+    margin: 30px 0;
+}
+
+.login-form input{
+    outline: none;
+    margin-bottom: 15px;
+    font-stretch: 16px;
+    color: #999;
+    text-align: left;
+    padding: 14px 20px;
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+
+    border: 1px solid #e5e5e5;
+    background: #f7fafc;
+    transition: 0.3s ease;
+
+
+}
+
+.login-form input:focus{
+    background: transparent;
+    border: 1px solid #0568c1;
+}
+
+.login-form button{
+    font-size: 18px;
+    color: #fff;
+    width: 100%;
+    background: #0568c1;
+    border: none;
+    padding: 14px 15px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+.login-form button:hover{
+    background: #fdc500;
+}
+p.account, p.account a{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 0;
+    font-size: 16px;
+    color: #333;
+}
+p.account a{
+    color: #0568c1;
+}
+p.account a:hover{
+    text-decoration: underline;
+}
+
+
+/* *****responsive***** */
+@media(max-width: 736px){
+    .login-form .main{
+        flex-direction: column;
+    }
+    .login-form form{
+        margin-top: 30px;
+        margin-bottom:10px;
+    }
+    .form-img{
+        border-radius: 0;
+        border-bottom-left-radius:8px ;
+        border-bottom-right-radius: 8px;
+      order: 2;
+    }
+    .content{
+        order: 1;
+        border-radius: 0;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+}
