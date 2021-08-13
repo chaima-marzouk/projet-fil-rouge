@@ -1,4 +1,8 @@
-        <!-- --------header-------- -->
+        
+        <?php var_dump($data['comment'][2] );?>
+        
+
+             <!-- --------header-------- -->
         <?php
         require APPROOT . '/views/inc/header.php';
         ?>
@@ -41,6 +45,7 @@
                                         </form>
                             </div>
                         </div>
+        
                     
                      <?php endif; ?>
                         <span><?php echo $post->email ?></span>
@@ -52,8 +57,55 @@
                         <p class="blog-post_details">
                         <?php echo $post->details ?>
                         </p>
-                        <a href="" class="blog-post_cta">Donate</a>
-                    </div>  
+                        <!-- <a href="" class="blog-post_cta">Donate</a> -->
+                        <form action="" class="comment-form">
+                            <input type="text" placeholder="add comment to donate">
+                            <button>Add</button>
+                        </form>
+
+                        <?php if(isset($_SESSION['user_id']) && $_SESSION['user_id'] == $post->user_id && $post->id ==  $data['comment'][0]->id_post ): ?>
+
+                       <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                        Show all comments
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">My comments</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                            <!-- <?php foreach($data['comment'][3]->{"comment"} as $comments):?> -->
+
+                                <div>
+                                <h1>name</h1>
+                                <span><?php echo( $data['comment'][3]->{"comment"})?></span>
+                            </div>
+                            <!-- <div>
+                                <h1>name</h1>
+                                <span>Comment Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quibusdam ad dolorem nisi illum, quam cumque quas dolor, officia optio eaque quisquam dolore ipsa quis rerum ipsam ratione nostrum voluptatibus.</span>
+                            </div>
+                            <div>
+                                <h1>name</h1>
+                                <span>Comment Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quibusdam ad dolorem nisi illum, quam cumque quas dolor, officia optio eaque quisquam dolore ipsa quis rerum ipsam ratione nostrum voluptatibus.</span>
+                            </div> -->
+                            <!-- <?php endforeach ; ?> -->
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                        <?php endif; ?>
+                        
+           
                 </div>  
     </section>
                      <?php endforeach ; ?>

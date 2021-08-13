@@ -21,7 +21,7 @@
                         <input type="text" name="g_sang" placeholder="Blood G" required autofocus=""/>
                         <input type="text" name="phone" placeholder="Phone number" required autofocus=""/>
                         <input type="text" name="cin" placeholder="cin" required autofocus=""/>
-                        <button type="submit"  class="btn">register</button>
+                        <button type="submit" name="signup"  class="btn">register</button>
                     </form>
                 </div>
 

@@ -69,13 +69,8 @@
             $this->view('pages/admin');
         }
         public function profil(){
-            $user = $this->postModel->getUser();
-
-            $data = [
-                'user' => $user,
-            ];
-
-            $this->view('pages/profil',$data);
+           
+            $this->view('pages/profil');
         }
 
         public function logout() {
@@ -83,7 +78,7 @@
         unset($_SESSION['user_id']);
         unset($_SESSION['username']);
         unset($_SESSION['email']);
-        $this->view('pages/Admin_login');
+        $this->view('pages/login');
         
         }
 
@@ -119,7 +114,7 @@
         public function signup(){
             if(!isset($_POST['signup'])){
                 //load the view insert
-                $this->view('pages/login');
+                $this->view('pages/register');
             }
 
             else{
@@ -136,7 +131,7 @@
               //consomation du data
               $this->callModel->register($data);
               header('location: ' . URLROOT . '/' . 'UserController/admin_signin');
-              echo("added succefully ! ");
+              echo "<script>alert(\"Regestred succefully :)\")</script>";
             }
         }
 

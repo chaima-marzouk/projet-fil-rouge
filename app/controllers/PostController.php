@@ -6,12 +6,15 @@ class PostController extends Controller{
     }
 
     public function index(){
-
+        $comment = $this->postModel->findAllComment();
         $post = $this->postModel->findAllPosts();
         $data = [
-        'posts' => $post
+        'posts' => $post,
+        'comment' => $comment
        ];
         $this->view('pages/Post', $data);
+        var_dump($comment);
+        die();
     }
 
 
